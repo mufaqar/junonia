@@ -78,10 +78,7 @@ export default function Home() {
             Learn about Next.js in an interactive course with&nbsp;quizzes!
           </p>
         </a>
-
-
-      </a>
-    </div>
+      </div>
     </main >
   )
 }
