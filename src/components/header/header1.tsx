@@ -28,7 +28,7 @@ const Header1 = () => {
         </div>
       </header>
       {
-        searchOpen &&  <div className="absolute top-0 right-0 bottom-0 left-0 bg-black/40 dark:bg-white/30 "><SearchBox/></div>
+        searchOpen &&  <div className="absolute top-0 z-50 right-0 bottom-0 left-0 bg-black/40 dark:bg-white/30 "><SearchBox/></div>
       }
       
     </>
