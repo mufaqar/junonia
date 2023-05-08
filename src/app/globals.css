@@ -2,6 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
+/* fonts  */
+@font-face {
+    font-family: lato;
+    src: url('../../public/assets/fonts/Lato-Black.ttf');
+    font-weight: 800;
+}
+@font-face {
+    font-family: lato;
+    src: url('../../public/assets/fonts/Lato-Bold.ttf');
+    font-weight: 700;
+}
+@font-face {
+    font-family: lato;
+    src: url('../../public/assets/fonts/Lato-Light.ttf');
+    font-weight: 300;
+}
+@font-face {
+    font-family: lato;
+    src: url('../../public/assets/fonts/Lato-Regular.ttf');
+    font-weight: 400;
+}
+
+body{
+    font-family: lato, sans-serif;
+}
+
 :root{
     --dark-gray: #181818;
     --light-gray: #262626;

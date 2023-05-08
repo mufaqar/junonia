@@ -1,13 +1,13 @@
 "use client"
 
 import Header1 from '@/components/header/header1'
-import Image from 'next/image'
+import Main1 from '@/components/main/main1'
 
 export default function Home() {
   return (
     <>
       <Header1/>
-      <p>home page</p>
+      <Main1/>
     </>
   )
 }

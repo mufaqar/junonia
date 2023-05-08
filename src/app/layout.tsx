@@ -14,11 +14,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className}`} >
+      <body className={`dark:bg-dark-gray ${inter.className}`} >
         <SettingsProvider>
-          <ThemeProvider attribute="class">{children}</ThemeProvider>
+          <ThemeProvider enableSystem={false} attribute="class">{children}</ThemeProvider>
         </SettingsProvider>
       </body>
     </html>
   );
 }
+
