@@ -22,6 +22,9 @@ module.exports = {
         'text': `var(--text)`,
         'border': `var(--border)`,
       },
+      screens: {
+        '1080': '1080px',
+      },
     },
   },
   plugins: [],

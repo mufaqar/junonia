@@ -38,4 +38,8 @@ body{
     --border: #343434;
  }
 
-
+ @media (min-width:768px) and (max-width: 1080px){
+    ._grid{
+        grid-template-columns: 1fr !important;
+    }
+ }

@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
 import Logo from "../Logo/Logo";
 import Link from "next/link";
-import { BiSearch } from "react-icons/bi";
-import { RxCross2 } from "react-icons/rx";
+import { BiMenuAltRight, BiSearch } from "react-icons/bi";
+import { RxCross1, RxCross2 } from "react-icons/rx";
 import { NavLinks } from "../../const/navlinks";
 import { NavLinksType } from "@/utils/types";
 import ThemeSwitch from "../ThemeSwitch";
@@ -11,26 +11,26 @@ import Input from "../controlls/input";
 
 
 const Header1 = () => {
-  const {searchOpen, setSearchOpen} = useContext(SettingsContext)
+  const {searchOpen, setSearchOpen, isMobile, setIsMobile} = useContext(SettingsContext)
 
   return (
     <>
-      <header className="flex container py-4 mx-auto justify-between items-center">
+      <header className="flex container py-4 mx-auto justify-between items-center px-4 md:px-0">
         <Logo />
         <div className="flex">
-          <nav className="flex gap-7 mr-4 items-center">
+          <nav className={`gap-7 mr-4 items-center ${isMobile ? 'absolute top-16 flex flex-col gap-6 p-10 left-0 right-0 bg-light-gray w-full' : 'hidden md:flex'}`}>
             {NavLinks.map((item: NavLinksType, idx: number) => {
               return <Link href={item.link} className="uppercase hover:text-yellow" key={idx}>{item.name}</Link>;
             })}
           </nav>
           <BiSearch size={24} className="mx-5 mt-1 cursor-pointer" onClick={()=>setSearchOpen(true)}/>
           <ThemeSwitch/>
+          <div className="ml-3 md:hidden" onClick={()=>setIsMobile(!isMobile)}>{!isMobile ? <BiMenuAltRight size={32}/> : <RxCross1 size={32}/>}</div> 
         </div>
       </header>
       {
         searchOpen &&  <div className="absolute top-0 z-50 right-0 bottom-0 left-0 bg-black/40 dark:bg-white/30 "><SearchBox/></div>
       }
-      
     </>
   );
 };
