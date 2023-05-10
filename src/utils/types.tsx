@@ -4,3 +4,9 @@ export type NavLinksType = {
      link: string
  }
  
+ export type TPost = {
+    id: number;
+    title: string;
+    img:string;
+    body:string;
+ }

@@ -12,7 +12,7 @@ export default function Home() {
       <Header1 />
       <Main1 />
       <section className="lg:flex gap-10 px-4 lg:px-0 container mx-auto my-20">
-        <section className="lg:w-3/4">
+        <section className="lg:w-[73%]">
           <div className="grid gap-6 md:grid-cols-2">
             {PostMokeData.slice(0, 4).map((post, idx) => {
               return <PostDesign post={post} idx={idx} />;
@@ -34,6 +34,9 @@ export default function Home() {
 
         <Aside
           aboutAuthor={true}
+          social={true}
+          newsletter={true}
+          latestPost={PostMokeData}
         />
       </section>
     </>

@@ -31,8 +31,8 @@ const PostDesign = ({ post, layout }: any) => {
         )}
       </figure>
       <div
-        className={`p-6 bg-light-gray ${layout === 2 && "md:w-1/2"} ${
-          layout === 3 && "bg-transparent"
+        className={`bg-light-gray ${layout === 2 && "md:w-1/2"} ${
+          layout === 3 ? "p-0 bg-transparent" : 'p-6'
         }
         ${layout === 3 && "p-0 pt-6"}`}
       >

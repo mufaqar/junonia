@@ -28,15 +28,27 @@ body{
     font-family: lato, sans-serif;
 }
 
-:root{
-    --dark-gray: #181818;
-    --light-gray: #262626;
-    --yellow: #FFF054;
-    --pure: #fff;
-    --light-blue: #05ADAF;
-    --text: #B8B8B8;
-    --border: #343434;
- }
+ @layer base {
+    :root{
+        --dark-gray: #181818;
+        --light-gray: #262626;
+        --yellow: #FFF054;
+        --pure: #fff;
+        --light-blue: #05ADAF;
+        --text: #B8B8B8;
+        --border: #343434;
+     }
+  
+    :root[class="dark"] {
+        --dark-gray: #181818;
+        --light-gray: #262626;
+        --yellow: #FFF054;
+        --pure: #fff;
+        --light-blue: #05ADAF;
+        --text: #B8B8B8;
+        --border: #343434;
+    }
+  }
 
  @media (min-width:768px) and (max-width: 1080px){
     ._grid{
