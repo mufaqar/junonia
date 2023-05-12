@@ -97,7 +97,7 @@ const AboutAuthorSection = () => {
         className="w-full mt-4 object-cover h-[150px]"
       />
       <p className="text-center text-sm text-text mt-3">
-        Hi! i'm Marie dummy text of the printing and typesetting
+        Hi! Im Marie dummy text of the printing and typesetting
       </p>
       <Image
         src="/assets/images/sig.png"
