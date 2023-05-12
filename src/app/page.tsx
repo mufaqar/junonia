@@ -5,6 +5,9 @@ import Header1 from "@/components/header/header1";
 import Main1 from "@/components/main/main1";
 import PostDesign from "@/components/post-design/post-design";
 import { PostMokeData } from "@/const/post";
+import Insta from '@/components/insta';
+import Footer1 from "@/components/footer";
+
 
 export default function Home() {
   return (
@@ -37,8 +40,12 @@ export default function Home() {
           social={true}
           newsletter={true}
           latestPost={PostMokeData}
+          latestCategories={PostMokeData}
+          advertisement={true}
         />
       </section>
+      <Insta/>
+      <Footer1/>
     </>
   );
 }

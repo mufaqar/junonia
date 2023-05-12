@@ -15,16 +15,27 @@ interface ISidebar {
   aboutAuthor: boolean;
   social: boolean;
   newsletter: boolean;
-  latestPost:any
+  latestPost: any;
+  latestCategories: any;
+  advertisement:boolean;
 }
 
-const Aside = ({ aboutAuthor, social, newsletter, latestPost }: ISidebar) => {
+const Aside = ({
+  aboutAuthor,
+  social,
+  newsletter,
+  latestPost,
+  latestCategories,
+  advertisement
+}: ISidebar) => {
   return (
-    <aside className="lg:w-[27%] bg-light-gray p-7 py-10">
+    <aside className="lg:w-[27%] mt-10 md:mt-0 bg-light-gray p-7 py-10">
       {aboutAuthor && <AboutAuthorSection />}
       {social && <SocialSection />}
       {newsletter && <NewsLetterSection />}
-      {latestPost.length > 0 && <LatestPostSection posts={latestPost}/>}
+      {latestPost.length > 0 && <LatestPostSection posts={latestPost} />}
+      {latestCategories && <LatestCategories posts={latestCategories} />}
+      {advertisement && <Advertisement/>}
     </aside>
   );
 };
@@ -111,47 +122,98 @@ export const SideBarHeading = ({ children }: any) => {
 };
 
 const NewsLetterSection = () => {
-
-  const {searchValue, setSearchValue} = useContext(SettingsContext)
-  const handleChange = (value:string)=>{
-    setSearchValue(value)
-  }
+  const { searchValue, setSearchValue } = useContext(SettingsContext);
+  const handleChange = (value: string) => {
+    setSearchValue(value);
+  };
 
   return (
     <>
       <SideBarHeading> Subscribe Newsletter </SideBarHeading>
-      <section className="bg-yellow p-4 py-6 mt-6"> 
-      <p className="text-dark-gray mb-4 text-center ">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
-      <Input 
-        searchValue={searchValue}
-        setSearchValue={setSearchValue}
-        handleChange={handleChange}
-        className="w-full p-3 bg-white text-dark-gray"
-      />
-      <button className="bg-dark-gray mt-4 p-3 w-full">Subscribe</button>
+      <section className="bg-yellow p-4 py-6 mt-6">
+        <p className="text-dark-gray mb-4 text-center ">
+          Lorem ipsum dolor, sit amet consectetur adipisicing.
+        </p>
+        <Input
+          searchValue={searchValue}
+          setSearchValue={setSearchValue}
+          handleChange={handleChange}
+          className="w-full p-3 bg-white text-dark-gray"
+        />
+        <button className="bg-dark-gray mt-4 p-3 w-full">Subscribe</button>
       </section>
     </>
   );
 };
 
-const LatestPostSection = ({posts}:any) => {
-  return(
-    <div className="mt-12">
-    <SideBarHeading> latest posts </SideBarHeading>
-    <div className="mt-8 flex flex-col gap-4">
-      {
-        posts.slice(0,5).map((p:any, idx:number)=>{
-          return(
-            <div className="flex gap-4 ">
-              <Image src={p?.img} alt="feature" width={100} height={100} className="h-24 w-24 object-cover"/>
+const LatestPostSection = ({ posts }: any) => {
+  return (
+    <div className="mt-10">
+      <SideBarHeading> latest posts </SideBarHeading>
+      <div className="mt-8 flex flex-col gap-4">
+        {posts.slice(0, 5).map((p: any, idx: number) => {
+          return (
+            <div className="flex gap-4 group" key={idx}>
+              <Image
+                src={p?.img}
+                alt="feature"
+                width={100}
+                height={100}
+                className="h-24 w-24 _img object-cover"
+              />
               <div>
-                <h2 className="uppercase text-sm text-gray-400">{p.title}</h2>
+                <h2 className="uppercase text-sm text-pure cursor-pointer group-hover:underline">
+                  {p.title}
+                </h2>
               </div>
             </div>
-          )
-        })
-      }
+          );
+        })}
+      </div>
     </div>
-    </div>
+  );
+};
+
+const LatestCategories = ({ posts }: any) => {
+  const categories = posts.reduce((acc:any, product:any) => {
+    if (!acc.includes(product.categories)) {
+      acc.push(product.categories);
+    }
+    return acc;
+  }, []);
+  return (
+    <>
+      <div className="mt-10">
+        <SideBarHeading> latest Categories </SideBarHeading>
+        <div className="mt-8 flex flex-col gap-4">
+          {categories.slice(0, 7).map((p: any, idx: number) => {
+            const item = posts.filter((item:any)=>item.categories === p)
+            return (
+              <div className="flex gap-2 justify-between border-b-[1px] border-border last:border-transparent pb-3 group" key={idx}>
+                <div className="flex items-center justify-center gap-2">
+                  <div className="p-[5px] bg-yellow"/>
+                  <h2 className="capitalize text-sm text-gray-400 group-hover:text-yellow cursor-pointer ">
+                    {p}
+                  </h2>
+                </div>
+                <div className="text-sm">({item.length})</div>
+              </div>
+            );
+          })}
+        </div>
+        <div className="pt-[1px] bg-border my-6 mt-10" />
+      </div>
+    </>
+  );
+};
+
+const Advertisement = () =>{
+  return(
+    <>
+      <div className="p-5 w-full mt-12 bg-cover bg-no-repeat" style={{ backgroundImage: `url("/assets/images/Cars.jpg")`}}>
+          <h2 className="text-center text-sm mb-20">Best Quality Lorem ipsum dolor sit amet consectetur adipisicing.</h2>
+          <button className="uppercase bg-yellow text-black text-xs w-full hover:bg-black hover:text-yellow p-3">Purchase Now</button>
+      </div>
+    </>
   )
 }
