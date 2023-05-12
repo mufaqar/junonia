@@ -15,7 +15,7 @@ interface ISidebar {
   aboutAuthor: boolean;
   social: boolean;
   newsletter: boolean;
-  latestPost:any
+  latestPost: any
 }
 
 const Aside = ({ aboutAuthor, social, newsletter, latestPost }: ISidebar) => {
@@ -24,7 +24,7 @@ const Aside = ({ aboutAuthor, social, newsletter, latestPost }: ISidebar) => {
       {aboutAuthor && <AboutAuthorSection />}
       {social && <SocialSection />}
       {newsletter && <NewsLetterSection />}
-      {latestPost.length > 0 && <LatestPostSection posts={latestPost}/>}
+      {latestPost.length > 0 && <LatestPostSection posts={latestPost} />}
     </aside>
   );
 };
@@ -86,7 +86,7 @@ const AboutAuthorSection = () => {
         className="w-full mt-4 object-cover h-[150px]"
       />
       <p className="text-center text-sm text-text mt-3">
-        Hi! i'm Marie dummy text of the printing and typesetting
+        Hi! Im Marie dummy text of the printing and typesetting
       </p>
       <Image
         src="/assets/images/sig.png"
@@ -112,46 +112,46 @@ export const SideBarHeading = ({ children }: any) => {
 
 const NewsLetterSection = () => {
 
-  const {searchValue, setSearchValue} = useContext(SettingsContext)
-  const handleChange = (value:string)=>{
+  const { searchValue, setSearchValue } = useContext(SettingsContext)
+  const handleChange = (value: string) => {
     setSearchValue(value)
   }
 
   return (
     <>
       <SideBarHeading> Subscribe Newsletter </SideBarHeading>
-      <section className="bg-yellow p-4 py-6 mt-6"> 
-      <p className="text-dark-gray mb-4 text-center ">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
-      <Input 
-        searchValue={searchValue}
-        setSearchValue={setSearchValue}
-        handleChange={handleChange}
-        className="w-full p-3 bg-white text-dark-gray"
-      />
-      <button className="bg-dark-gray mt-4 p-3 w-full">Subscribe</button>
+      <section className="bg-yellow p-4 py-6 mt-6">
+        <p className="text-dark-gray mb-4 text-center ">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+        <Input
+          searchValue={searchValue}
+          setSearchValue={setSearchValue}
+          handleChange={handleChange}
+          className="w-full p-3 bg-white text-dark-gray"
+        />
+        <button className="bg-dark-gray mt-4 p-3 w-full">Subscribe</button>
       </section>
     </>
   );
 };
 
-const LatestPostSection = ({posts}:any) => {
-  return(
+const LatestPostSection = ({ posts }: any) => {
+  return (
     <div className="mt-12">
-    <SideBarHeading> latest posts </SideBarHeading>
-    <div className="mt-8 flex flex-col gap-4">
-      {
-        posts.slice(0,5).map((p:any, idx:number)=>{
-          return(
-            <div className="flex gap-4 ">
-              <Image src={p?.img} alt="feature" width={100} height={100} className="h-24 w-24 object-cover"/>
-              <div>
-                <h2 className="uppercase text-sm text-gray-400">{p.title}</h2>
+      <SideBarHeading> latest posts </SideBarHeading>
+      <div className="mt-8 flex flex-col gap-4">
+        {
+          posts.slice(0, 5).map((p: any, idx: number) => {
+            return (
+              <div className="flex gap-4 ">
+                <Image src={p?.img} alt="feature" width={100} height={100} className="h-24 w-24 object-cover" />
+                <div>
+                  <h2 className="uppercase text-sm text-gray-400">{p.title}</h2>
+                </div>
               </div>
-            </div>
-          )
-        })
-      }
-    </div>
+            )
+          })
+        }
+      </div>
     </div>
   )
 }
