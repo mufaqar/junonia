@@ -15,19 +15,19 @@ export default function Home() {
         <section className="lg:w-[73%]">
           <div className="grid gap-6 md:grid-cols-2">
             {PostMokeData.slice(0, 4).map((post, idx) => {
-              return <PostDesign post={post} idx={idx} />;
+              return <PostDesign post={post} idx={idx} key={idx} />;
             })}
           </div>
           <div className="pt-[1px] bg-border my-16" />
           <div className="flex gap-6 flex-col">
             {PostMokeData.slice(0, 2).map((post, idx) => {
-              return <PostDesign post={post} idx={idx} layout={2} />;
+              return <PostDesign post={post} idx={idx} layout={2} key={idx} />;
             })}
           </div>
           <div className="pt-[1px] bg-border my-16" />
           <div className="grid gap-6 md:grid-cols-3">
             {PostMokeData.slice(0, 3).map((post, idx) => {
-              return <PostDesign post={post} idx={idx} layout={3} />;
+              return <PostDesign post={post} idx={idx} layout={3} key={idx} />;
             })}
           </div>
         </section>
