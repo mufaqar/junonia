@@ -142,7 +142,7 @@ const LatestPostSection = ({ posts }: any) => {
         {
           posts.slice(0, 5).map((p: any, idx: number) => {
             return (
-              <div className="flex gap-4 ">
+              <div className="flex gap-4 " key={idx}>
                 <Image src={p?.img} alt="feature" width={100} height={100} className="h-24 w-24 object-cover" />
                 <div>
                   <h2 className="uppercase text-sm text-gray-400">{p.title}</h2>
