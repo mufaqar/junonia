@@ -43,7 +43,7 @@ const MainPost = ({className, post}:any) => {
   console.log("🚀 ~ file: main1.tsx:43 ~ MainPost ~ post:", post)
   return (
     <div
-      className="relative h-[250px] md:h-full bg-cover bg-no-repeat"
+      className="relative h-[250px] md:h-full bg-cover bg-no-repeat md:mt-[56px]"
       style={{ backgroundImage: `url(${post?.img})`}}
     >
       <div className="absolute top-0 right-0 p-4 md:p-10 flex flex-col justify-end left-0 bottom-0 bg-black/30">

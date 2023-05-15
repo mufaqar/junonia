@@ -19,9 +19,8 @@ const PostDesign = ({ post, layout }: any) => {
           alt=""
           width={200}
           height={200}
-          className={`w-full  group-hover:scale-110 transition-all duration-300 group-hover:rotate-3 ease-in-out object-cover ${
-            layout === 2 ? "h-[240px]" : "h-[250px] sm:h-[300px]"
-          }
+          className={`w-full  group-hover:scale-110 transition-all duration-300 group-hover:rotate-3 ease-in-out object-cover ${ layout === 2 ? "h-[240px]" : "h-[250px] sm:h-[300px]"}
+            ${ layout === 3 && "sm:h-[240px]" }
           `}
         />
         {layout !== 3 && (
@@ -41,10 +40,10 @@ const PostDesign = ({ post, layout }: any) => {
             By Danial Alam - <span className="uppercase">22 December</span>
           </p>
           <h2
-            className={` font-normal ${
+            className={`text-[1.3rem] font-semibold ${
               layout === 3
-                ? "text-xl mb-3 leading-6"
-                : "text-2xl text-white leading-9 mt-2"
+                ? " mb-3 leading-6"
+                : " text-pure leading-7 mt-2"
             }`}
           >
             {post.title}

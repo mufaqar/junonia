@@ -31,12 +31,12 @@ body{
  @layer base {
     :root{
         --dark-gray: #181818;
-        --light-gray: #262626;
+        --light-gray: #fafafa;
         --yellow: #FFF054;
-        --pure: #fff;
+        --pure: #393939;
         --light-blue: #05ADAF;
-        --text: #B8B8B8;
-        --border: #343434;
+        --text: #979797;
+        --border: #eaeaea;
      }
   
     :root[class="dark"] {
@@ -54,4 +54,8 @@ body{
     ._grid{
         grid-template-columns: 1fr !important;
     }
+ }
+
+ ._img{
+    min-width: 6rem !important;
  }

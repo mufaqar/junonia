@@ -8,24 +8,28 @@ import { NavLinksType } from "@/utils/types";
 import ThemeSwitch from "../ThemeSwitch";
 import { SettingsContext } from "@/context/setting-context";
 import Input from "../controlls/input";
-
+import {HiOutlineMenu} from 'react-icons/hi'
 
 const Header1 = () => {
   const {searchOpen, setSearchOpen, isMobile, setIsMobile} = useContext(SettingsContext)
+  
 
   return (
     <>
-      <header className="flex container py-4 mx-auto justify-between items-center px-4 md:px-0">
+      <header className="bg-white right-0 left-0 top-0 shadow-md fixed w-full z-50 dark:bg-dark-gray">
+        <div className="container mx-auto flex py-2 justify-between items-center px-4 md:px-0">
         <Logo />
         <div className="flex">
-          <nav className={`gap-7 mr-4 items-center ${isMobile ? 'absolute top-16 flex flex-col gap-6 p-10 left-0 right-0 bg-light-gray w-full' : 'hidden md:flex'}`}>
+          <nav className={`gap-7 mr-4 items-center ${isMobile ? 'absolute top-12 flex flex-col gap-6 p-10 left-0 right-0 bg-light-gray w-full' : 'hidden md:flex'}`}>
             {NavLinks.map((item: NavLinksType, idx: number) => {
               return <Link href={item.link} className="uppercase hover:text-yellow" key={idx}>{item.name}</Link>;
             })}
           </nav>
           <BiSearch size={24} className="mx-5 mt-1 cursor-pointer" onClick={()=>setSearchOpen(true)}/>
+          <HiOutlineMenu size={24} className="mr-5 mt-1 cursor-pointer"/>
           <ThemeSwitch/>
           <div className="ml-3 md:hidden" onClick={()=>setIsMobile(!isMobile)}>{!isMobile ? <BiMenuAltRight size={32}/> : <RxCross1 size={32}/>}</div> 
+        </div>
         </div>
       </header>
       {
@@ -51,16 +55,14 @@ const SearchBox = () => {
         searchValue={searchValue}
         setSearchValue={setSearchValue}
         handleChange={handleChange}
-        className="md:w-[600px] p-5 bg-transparent text-white"
+        className="md:w-[600px] p-5 bg-transparent text-pure"
       />
       <button className="bg-yellow w-12 h-12 mr-3 group rounded-full flex justify-center items-center flex-col">
-        {
-          searchValue.length > 0 ? <BiSearch size={24} className="mx-5 mt-1 text-black group-hover:scale-110 cursor-pointer"/> :
-          <RxCross2 size={24} className="mx-5 mt-1 text-black group-hover:scale-110 cursor-pointer" onClick={()=>setSearchOpen(false)}/>
-        }
-        
+        <BiSearch size={24} className="mx-5 mt-1 text-black group-hover:scale-110 cursor-pointer"/>
       </button>
-      
+      <button className="bg-yellow w-12 h-12 mr-3 group rounded-full flex justify-center items-center flex-col">
+        <RxCross2 size={24} className="mx-5 mt-1 text-black group-hover:scale-110 cursor-pointer" onClick={()=>setSearchOpen(false)}/> 
+      </button>
       </div>
     </section>
   )
