@@ -2,6 +2,7 @@ import Image from "next/image";
 import React from "react";
 import { GetWordStr } from "../../utils";
 import { AiOutlineShareAlt } from "react-icons/ai";
+import Link from "next/link";
 
 const PostDesign = ({ post, layout }: any) => {
   return (
@@ -10,7 +11,8 @@ const PostDesign = ({ post, layout }: any) => {
       ${layout === 2 && "md:flex"}
       ${layout === 3 && "bg-transparent"}
       `}
-    >
+    > 
+      <Link href={`/blogs/${post.title}`}>
       <figure
         className={`overflow-hidden relative ${layout === 2 && "md:w-1/2"}`}
       >
@@ -19,7 +21,7 @@ const PostDesign = ({ post, layout }: any) => {
           alt=""
           width={200}
           height={200}
-          className={`w-full  group-hover:scale-110 transition-all duration-300 group-hover:rotate-3 ease-in-out object-cover ${ layout === 2 ? "h-[240px]" : "h-[250px] sm:h-[300px]"}
+          className={`w-full group-hover:scale-110 transition-all duration-300 group-hover:rotate-3 ease-in-out object-cover ${ layout === 2 ? "h-[240px]" : "h-[250px] sm:h-[300px]"}
             ${ layout === 3 && "sm:h-[240px]" }
           `}
         />
@@ -29,6 +31,7 @@ const PostDesign = ({ post, layout }: any) => {
           </div>
         )}
       </figure>
+      </Link>
       <div
         className={`bg-light-gray ${layout === 2 && "md:w-1/2"} ${
           layout === 3 ? "p-0 bg-transparent" : 'p-6'
@@ -40,7 +43,7 @@ const PostDesign = ({ post, layout }: any) => {
             By Danial Alam - <span className="uppercase">22 December</span>
           </p>
           <h2
-            className={`text-[1.3rem] font-semibold ${
+            className={`text-[18px] font-medium font-poppins ${
               layout === 3
                 ? " mb-3 leading-6"
                 : " text-pure leading-7 mt-2"
@@ -50,7 +53,7 @@ const PostDesign = ({ post, layout }: any) => {
           </h2>
         </div>
         {layout !== 3 && (
-          <p className="mt-3 text-text">{GetWordStr(post?.body, 16)}</p>
+          <p className="mt-3 text-text font-normal">{GetWordStr(post?.body, 16)}</p>
         )}
       </div>
     </div>

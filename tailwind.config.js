@@ -25,6 +25,11 @@ module.exports = {
       screens: {
         '1080': '1080px',
       },
+      fontFamily: {
+        'oswald': ['oswald'],
+        'poppins': ['poppins'],
+        'lato': ['lato'],
+      },
     },
   },
   plugins: [],

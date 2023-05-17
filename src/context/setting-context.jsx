@@ -6,21 +6,23 @@ export const SettingsProvider = ({ children }) => {
   const [isMobile, setIsMobile] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
   const [searchValue, setSearchValue] = useState('');
-  const [windowSize, setWindowSize] = useState([
-    window.innerWidth,
-    window.innerHeight,
-  ]);
+  const [windowSize, setWindowSize] = useState([]);
+
   useEffect(() => {
     const handleWindowResize = () => {
       setWindowSize([window.innerWidth, window.innerHeight]);
     };
 
-    window.addEventListener('resize', handleWindowResize);
+    if (typeof window !== 'undefined') {
+      // Access the window object only if it exists
+      setWindowSize([window.innerWidth, window.innerHeight]);
+      window.addEventListener('resize', handleWindowResize);
 
-    return () => {
-      window.removeEventListener('resize', handleWindowResize);
-    };
-  });
+      return () => {
+        window.removeEventListener('resize', handleWindowResize);
+      };
+    }
+  }, []);
 
   return (
     <SettingsContext.Provider
