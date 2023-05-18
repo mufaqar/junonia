@@ -7,6 +7,7 @@ export const SettingsProvider = ({ children }) => {
   const [searchOpen, setSearchOpen] = useState(false);
   const [searchValue, setSearchValue] = useState('');
   const [windowSize, setWindowSize] = useState([]);
+  const [openSide, setOpenSide] = useState(false);
 
   useEffect(() => {
     const handleWindowResize = () => {
@@ -34,7 +35,9 @@ export const SettingsProvider = ({ children }) => {
         setSearchValue,
         searchValue,
         windowSize,
-        setWindowSize
+        setWindowSize,
+        setOpenSide,
+        openSide
       }}
     >
       {children}

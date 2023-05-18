@@ -14,7 +14,7 @@ const PostDesign = ({ post, layout }: any) => {
     > 
       <Link href={`/blogs/${post.title}`}>
       <figure
-        className={`overflow-hidden relative ${layout === 2 && "md:w-1/2"}`}
+        className={`overflow-hidden relative ${layout === 2 && "md:w-full"}`}
       >
         <Image
           src={post?.img}

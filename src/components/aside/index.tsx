@@ -109,11 +109,11 @@ const AboutAuthorSection = () => {
   );
 };
 
-export const SideBarHeading = ({ children }: any) => {
+export const SideBarHeading = ({ children, long }: any) => {
   return (
     <div className="flex flex-col justify-center items-center">
       <div className="pt-[1px] bg-yellow w-full" />
-      <h6 className="uppercase text-sm text-center px-2 dark:bg-light-gray bg-yellow inline-block -mt-[10px]">
+      <h6 className={`uppercase text-sm text-center  inline-block -mt-[10px] ${long ? 'px-8 bg-yellow dark:bg-dark-gray' : 'px-2 dark:bg-light-gray bg-yellow'}`}>
         {children}
       </h6>
     </div>

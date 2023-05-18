@@ -9,10 +9,11 @@ import ThemeSwitch from "../ThemeSwitch";
 import { SettingsContext } from "@/context/setting-context";
 import Input from "../controlls/input";
 import {HiOutlineMenu} from 'react-icons/hi'
+import SideSection from "../side-section/side-section";
 
 const Header1 = () => {
-  const {searchOpen, setSearchOpen, isMobile, setIsMobile} = useContext(SettingsContext)
-  
+  const {searchOpen, setSearchOpen, isMobile, setIsMobile, setOpenSide, openSide} = useContext(SettingsContext)
+
 
   return (
     <>
@@ -26,15 +27,17 @@ const Header1 = () => {
             })}
           </nav>
           <BiSearch size={24} className="mx-5 mt-1 cursor-pointer" onClick={()=>setSearchOpen(true)}/>
-          <HiOutlineMenu size={24} className="mr-5 mt-1 cursor-pointer"/>
+          <HiOutlineMenu size={24} className="mr-5 mt-1 cursor-pointer" onClick={()=>setOpenSide(!openSide)}/>
           <ThemeSwitch/>
           <div className="ml-3 md:hidden" onClick={()=>setIsMobile(!isMobile)}>{!isMobile ? <BiMenuAltRight size={32}/> : <RxCross1 size={32}/>}</div> 
         </div>
         </div>
       </header>
       {
-        searchOpen &&  <div className="absolute top-0 z-50 right-0 bottom-0 left-0 bg-black/40 dark:bg-white/30 "><SearchBox/></div>
+        searchOpen &&  <div className="fixed top-0 z-50 right-0 bottom-0 left-0 bg-black/40 dark:bg-white/30 "><SearchBox/></div>
       }
+      <section className={`transition-all duration-300 fixed top-0 bottom-0 p-8 bg-[#090909] z-50 w-full md:w-[350px] ease-in-out ${openSide ? 'right-0' : '-right-[100%]'}`}><SideSection/></section>
+      
     </>
   );
 };
@@ -49,7 +52,7 @@ const SearchBox = () => {
     setSearchValue(value)
   }
   return(
-    <section className="flex  justify-center items-center mt-28">
+    <section className="flex justify-center items-center mt-28">
       <div className="flex items-center md:w-[600px] relative bg-dark-gray rounded-full overflow-hidden" >
       <Input 
         searchValue={searchValue}

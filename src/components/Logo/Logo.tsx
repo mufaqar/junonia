@@ -5,7 +5,7 @@ import React, { useEffect } from "react";
 const Logo = () => {
 
   return (
-    <Link href="/assets/svg/logo.svg" className="w-36 md:w-52">
+    <Link href="/" className="w-36 md:w-52">
       <svg
         version="1.2"
         xmlns="http://www.w3.org/2000/svg"

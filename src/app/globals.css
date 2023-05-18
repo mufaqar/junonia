@@ -57,7 +57,7 @@ body{
  @layer base {
     :root{
         --dark-gray: #181818;
-        --light-gray: #fafafa;
+        --light-gray: #F3F4F6;
         --yellow: #FFF054;
         --pure: #393939;
         --light-blue: #05ADAF;

@@ -1,13 +1,15 @@
 "use client";
 
 import Aside, { SideBarHeading } from "@/components/aside";
+import Footer1 from "@/components/footer";
+import Insta from "@/components/insta";
 import PageBanner from "@/components/page-banner/banner";
 import PostDesign from "@/components/post-design/post-design";
 import { PostMokeData } from "@/const/post";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { FaFacebookF, FaLinkedinIn, FaPinterestP, FaRegCommentAlt, FaTwitter } from "react-icons/fa";
+import { FaFacebookF, FaLinkedinIn, FaPinterestP, FaRegCommentAlt, FaReply, FaTwitter } from "react-icons/fa";
 import {SlCalender} from 'react-icons/sl'
 
 const Slug = () => {
@@ -84,7 +86,7 @@ const Slug = () => {
                 <Image src="/assets/images/Cars.jpg" alt="profile" width={200} height={200} className="w-40 h-40 rounded-full" style={{minWidth:"10rem"}}/>
               </div>
               <div>
-                <h4 className="text-lg text-dark-gray dark:text-white mt-6 sm:mt-0">Expert design</h4>
+                <h4 className="text-lg text-dark-gray dark:text-gray-200 mt-6 sm:mt-0">Expert design</h4>
                 <p className="mt-3 mb-2 text-gray-400">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id laudantium veritatis quae cum excepturi fugit quisquam voluptatibus. Veniam inventore, necessitatibus iusto quo adipisci laboriosam, fugit omnis esse nam deserunt incidunt!</p>
                 <ul className="flex items-center gap-4 text-light-blue mt-4">
                   <li className="hover:text-yellow text-lg"><Link href="#"><FaFacebookF/></Link></li>
@@ -94,14 +96,18 @@ const Slug = () => {
                 </ul>
               </div>
           </div>
-          <SideBarHeading> Related Post </SideBarHeading>
+          <SideBarHeading long={true}> Related Post </SideBarHeading>
           <div className="grid gap-6 md:grid-cols-3 my-10">
             {PostMokeData.slice(0, 3).map((post, idx) => {
               return <PostDesign post={post} idx={idx} layout={3} key={idx} />;
             })}
           </div>
-          <SideBarHeading> Comments </SideBarHeading>
-
+          <SideBarHeading long={true}> Comments </SideBarHeading>
+          <CommentDesign/>
+          <CommentDesign reply={true}/>
+          <CommentDesign border={false}/>
+          <SideBarHeading long={true}> Comment </SideBarHeading>
+          <CommentForm/>
         </section>
 
         <Aside
@@ -113,8 +119,54 @@ const Slug = () => {
           advertisement={true}
         />
       </section>
+      <Insta/>
+      <Footer1/>
     </>
   );
 };
 
 export default Slug;
+
+
+
+
+const CommentDesign = ({reply, border}:any) =>{
+  return(
+    <section>
+      <div className={`flex gap-5 mb-8 first:mt-10 ${reply && 'pl-12'}`}>
+          <figure>
+            <Image src="/assets/images/avatar.png" alt="avatar" width={70} height={70} className="rounded-full"/>
+          </figure>
+          <div className={`border-b-[1px]  pb-8 ${border ? 'border-border' : 'border-transparent' }`}>
+            <div className="flex justify-between ">
+              <div>
+                <h6 className="uppercase font-poppins">MARIE John </h6>
+                <p className="text-gray-400 text-sm my-2">January 21, 2016 01.54 am</p>
+              </div>
+              <div className="text-light-blue flex item-center gap-2 hover:text-yellow cursor-pointer">
+                <FaReply size={18}/>
+                <span className="text-sm">Reply</span>
+              </div>
+            </div>
+            <p className="text-sm font-light leading-6">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore.</p>
+          </div>
+      </div>
+    </section>
+  )
+}
+
+
+
+const CommentForm =()=>{
+  return(
+    <form className="mt-12">
+        <textarea className="w-full h-60 bg-gray-100 dark:bg-light-gray text-gray-500 p-4 focus:outline-yellow text-sm" placeholder="Message"></textarea>
+        <div className="mt-2 md:flex gap-4">
+          <input type="text" className="p-4 bg-gray-100 dark:bg-light-gray w-full text-gray-500 mt-4 md:mt-0 focus:outline-yellow border-none text-sm" placeholder="Name"/>
+          <input type="text" className="p-4 bg-gray-100 dark:bg-light-gray w-full text-gray-500 mt-4 md:mt-0 focus:outline-yellow border-none text-sm" placeholder="Email"/>
+          <input type="text" className="p-4 bg-gray-100 dark:bg-light-gray w-full text-gray-500 mt-4 md:mt-0 focus:outline-yellow border-none text-sm" placeholder="Web URL"/>
+        </div>
+        <input type="button" value="submit" className="bg-yellow uppercase text-black w-full mt-4 p-3 hover:bg-light-blue cursor-pointer"/>
+    </form>
+  )
+}
