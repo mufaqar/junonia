@@ -7,6 +7,7 @@ import PostDesign from "@/components/post-design/post-design";
 import { PostMokeData } from "@/const/post";
 import Insta from '@/components/insta';
 import Footer1 from "@/components/footer";
+import Layout from "@/components/Layout/Layout";
 
 
 export default function Home() {
@@ -14,7 +15,8 @@ export default function Home() {
     <>
       <Header1 />
       <Main1 />
-      <section className="lg:flex gap-10 px-4 lg:px-0 container mx-auto my-10 md:my-20 md:mt-28">
+      <Layout>
+      <section className="lg:flex gap-10 my-10 md:my-20 md:mt-28">
         <section className="lg:w-[73%]">
           <div className="grid gap-6 md:grid-cols-2">
             {PostMokeData.slice(0, 4).map((post, idx) => {
@@ -44,6 +46,8 @@ export default function Home() {
           advertisement={true}
         />
       </section>
+      </Layout>
+      
       <Insta/>
       <Footer1/>
     </>

@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Logo from "../Logo/Logo";
 import Link from "next/link";
 import { BiMenuAltRight, BiSearch } from "react-icons/bi";
@@ -14,16 +14,29 @@ import SideSection from "../side-section/side-section";
 const Header1 = () => {
   const {searchOpen, setSearchOpen, isMobile, setIsMobile, setOpenSide, openSide} = useContext(SettingsContext)
 
+  const [scrollTop, setScrollTop] = useState<any>(0);
+  const [headerClr, setHeaderClr] = useState(false);
+
+  useEffect(() => {
+    function onScroll() {
+      let currentPosition = window.pageYOffset;
+      setScrollTop(currentPosition <= 0 ? 0 : currentPosition);
+    }
+    scrollTop >= '10' ? setHeaderClr(true) : setHeaderClr(false);
+    window.addEventListener('scroll', onScroll);
+    return () => window.removeEventListener('scroll', onScroll);
+  
+  }, [scrollTop]);
 
   return (
     <>
-      <header className="bg-white right-0 left-0 top-0 shadow-md fixed w-full z-50 dark:bg-dark-gray">
-        <div className="container mx-auto flex py-2 justify-between items-center px-4 md:px-0">
+      <header className={`right-0 left-0 top-0 shadow-md max-h-[64px] fixed w-full z-50 ${headerClr ? 'bg-black' : 'bg-black/40'}`}>
+        <div className="container mx-auto flex py-2 justify-between items-center px-4 px-4 md:px-10">
         <Logo />
-        <div className="flex">
+        <div className="flex text-white">
           <nav className={`gap-7 mr-4 items-center ${isMobile ? 'absolute top-12 flex flex-col gap-6 p-10 left-0 right-0 bg-light-gray w-full' : 'hidden md:flex'}`}>
             {NavLinks.map((item: NavLinksType, idx: number) => {
-              return <Link href={item.link} className="uppercase hover:text-light-blue" key={idx}>{item.name}</Link>;
+              return <Link href={item.link} className="uppercase text-white" key={idx}>{item.name}</Link>;
             })}
           </nav>
           <BiSearch size={24} className="mx-5 mt-1 cursor-pointer" onClick={()=>setSearchOpen(true)}/>

@@ -3,11 +3,13 @@ import Link from 'next/link'
 import React from 'react'
 import { FaFacebookF, FaInstagram,FaLinkedinIn, FaPinterestP,FaDribbble, FaTwitter } from 'react-icons/fa';
 import Logo from '../Logo/Logo';
+import Layout from '../Layout/Layout';
 
 
 const Footer1 = () => {
   return (
-    <footer className='container mx-auto mt-20 px-4 lg:px-0'>
+    <footer className='mt-20'>
+      <Layout>
         <div className='flex items-center justify-center flex-col mb-10'>
             <Logo/>
             <p className='mt-4 uppercase text-text text-sm font-poppins text-center'>SUBSCRIBE FOR WEEKLY UPDATES AND EXCLUSIVE OFFERS</p>
@@ -31,6 +33,7 @@ const Footer1 = () => {
             <Link href="#" className='hover:text-yellow'><FaTwitter/></Link>
           </ul>
         </div>
+        </Layout>
     </footer>
   )
 }

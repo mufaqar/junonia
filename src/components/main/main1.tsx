@@ -16,7 +16,7 @@ const Main1 = () => {
 
   return (
     <>
-      <main className="h-[520px] md:grid grid-cols-2">
+      <main className="h-[580px] md:grid grid-cols-2 -mt-[60px]">
         <div className="">
           <MainPost post={PostMokeData[0]} className="text-xl md:text-3xl  font-oswald"/>
         </div>
