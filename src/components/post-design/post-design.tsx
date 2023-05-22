@@ -21,8 +21,8 @@ const PostDesign = ({ post, layout }: any) => {
           alt=""
           width={200}
           height={200}
-          className={`w-full group-hover:scale-110 transition-all duration-300 group-hover:rotate-3 ease-in-out object-cover ${ layout === 2 ? "h-[240px]" : "h-[250px] sm:h-[300px]"}
-            ${ layout === 3 && "sm:h-[240px]" }
+          className={`w-full group-hover:scale-110 transition-all duration-300 ease-in-out object-cover ${ layout === 2 ? "h-[240px]" : "h-[250px] sm:h-[300px]"}
+            ${ layout === 3 && "sm:h-[340px]" }
           `}
         />
         {layout !== 3 && (

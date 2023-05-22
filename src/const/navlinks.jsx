@@ -8,6 +8,10 @@ export const NavLinks = [
           link: '#'
      },
      {
+          name: 'Blogs',
+          link: '/blogs'
+     },
+     {
           name: 'About us',
           link: '#'
      },

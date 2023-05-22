@@ -85,3 +85,18 @@ body{
  ._img{
     min-width: 6rem !important;
  }
+
+ .blogs .slick-dots li button{
+margin-top: 50px;
+}
+
+ .blogs .slick-dots li button:before{
+    background: rgb(152, 152, 152);
+    border-radius: 100%;
+    content: '' !important
+ }
+
+ .blogs li.slick-active button:before{
+    background: #FFF054;
+    content: '' !important
+ }

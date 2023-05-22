@@ -1,18 +1,10 @@
-import GoogleMapReact from 'google-map-react'
 
-const GoogleMap = ({location, zoomLevel}:any) => {
+
+const GoogleMap = () => {
   
   return (
      <>
-     <div className="google-map">
-      <GoogleMapReact
-        bootstrapURLKeys={{ key: '' }}
-        defaultCenter={location}
-        defaultZoom={zoomLevel}
-      >
-       
-      </GoogleMapReact>
-    </div>
+      map
      </>
   )
 };
