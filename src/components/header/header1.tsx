@@ -28,10 +28,12 @@ const Header1 = () => {
   
   }, [scrollTop]);
 
+  
+
   return (
     <>
       <header className={`right-0 left-0 top-0 shadow-md max-h-[64px] fixed w-full z-50 ${headerClr ? 'bg-black' : 'bg-black/40'}`}>
-        <div className="container mx-auto flex py-2 justify-between items-center px-4 px-4 md:px-10">
+        <div className="container mx-auto flex py-2 justify-between items-center px-4 md:px-10">
         <Logo />
         <div className="flex text-white">
           <nav className={`gap-7 mr-4 items-center ${isMobile ? 'absolute top-12 flex flex-col gap-6 p-10 left-0 right-0 bg-light-gray w-full' : 'hidden md:flex'}`}>

@@ -6,7 +6,6 @@ import {IoIosArrowForward, IoIosArrowBack} from 'react-icons/io'
 import {CgArrowLongRight} from 'react-icons/cg'
 
 const SliderComponent = ({ data }: any) => {
-  console.log("🚀 ~ file: Slider.tsx:7 ~ SliderComponent ~ data:", data);
   const settings = {
     dots: true,
     infinite: true,

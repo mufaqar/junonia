@@ -25,6 +25,9 @@ export const SettingsProvider = ({ children }) => {
     }
   }, []);
 
+
+
+
   return (
     <SettingsContext.Provider
       value={{
@@ -37,7 +40,8 @@ export const SettingsProvider = ({ children }) => {
         windowSize,
         setWindowSize,
         setOpenSide,
-        openSide
+        openSide,
+        
       }}
     >
       {children}

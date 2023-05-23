@@ -1,7 +1,7 @@
 export const NavLinks = [
      {
           name: 'Home',
-          link: '#'
+          link: '/'
      },
      {
           name: 'pages',
@@ -13,10 +13,10 @@ export const NavLinks = [
      },
      {
           name: 'About us',
-          link: '#'
+          link: '/about-us'
      },
      {
           name: 'contact us',
-          link: '#'
+          link: '/contact-us'
      },
 ]

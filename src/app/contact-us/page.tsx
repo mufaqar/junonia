@@ -1,8 +1,6 @@
-import Layout from "@/components/Layout/Layout";
-import Footer1 from "@/components/footer";
+
 import Insta from "@/components/insta";
 import GoogleMap from "@/components/map/googleMap";
-import PageBanner from "@/components/page-banner/banner";
 import Button from "@/components/ui/button";
 import Image from "next/image";
 import React from "react";
@@ -12,14 +10,7 @@ const ContactUs = () => {
 
   return (
     <>
-      <PageBanner
-        title="Lorem ipsum dolor sit amet consectetur"
-        subTitle="Lorem ipsum dolor sit amet consectetur adipisicing elit"
-        image="/assets/images/contat.jpg"
-        buttontext="By this time"
-        buttonLink="#"
-      />
-      <Layout>
+      
         <form className="mt-12">
           <div className="mt-2 mb-5 md:flex gap-4">
             <input
@@ -90,10 +81,9 @@ const ContactUs = () => {
             </p>
           </div>
         </section>
-      </Layout>
       <GoogleMap />
       <Insta/>
-     <Footer1/>
+     
     </>
   );
 };

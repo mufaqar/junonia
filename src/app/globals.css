@@ -100,3 +100,9 @@ margin-top: 50px;
     background: #FFF054;
     content: '' !important
  }
+.boxshadow {
+    box-shadow: 4px 4px 0px 0px #FFF054;
+}
+.p a{
+    padding: 8px 14px !important
+}
