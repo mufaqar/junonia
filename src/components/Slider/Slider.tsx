@@ -38,7 +38,7 @@ const SliderComponent = ({ data }: any) => {
                   <span>ELLIOT ALDERSON</span>
                   <span>5 Comments</span>
                 </div>
-                <Button variants="secondary" size="medium" shadow={true}>View More <CgArrowLongRight size={28}/></Button>
+                <Button variants="secondary" size="medium">View More <CgArrowLongRight size={28}/></Button>
               </div>
 
             </div>
