@@ -1,6 +1,5 @@
 "use client";
 
-import Layout from "@/components/Layout/Layout";
 import Footer1 from "@/components/footer";
 import Header1 from "@/components/header/header1";
 import PageBanner from "@/components/page-banner/banner";
@@ -16,13 +15,13 @@ export default function ConatctLayout({
       <body>
         <Header1 />
         <PageBanner
-          title="Lorem ipsum dolor sit amet consectetur"
+          title="Contact Us"
           subTitle="Lorem ipsum dolor sit amet consectetur adipisicing elit"
           image="/assets/images/contat.jpg"
           buttontext="By this time"
           buttonLink="#"
         />
-        <Layout>{children}</Layout>
+        {children}
         <Footer1/>
       </body>
     </html>

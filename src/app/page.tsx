@@ -32,7 +32,7 @@ export default function Home() {
           <div className="pt-[1px] bg-border my-16" />
           <div className="grid gap-6 md:grid-cols-3">
             {PostMokeData.slice(0, 3).map((post, idx) => {
-              return <PostDesign post={post} idx={idx} layout={3} key={idx} />;
+              return <PostDesign post={post} idx={idx} home={true} layout={3} key={idx} />;
             })}
           </div>
         </section>

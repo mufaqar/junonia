@@ -14,7 +14,7 @@ const Footer1 = () => {
             <Logo/>
             <p className='mt-4 uppercase text-text text-sm font-poppins text-center'>SUBSCRIBE FOR WEEKLY UPDATES AND EXCLUSIVE OFFERS</p>
             <div className='mt-5 border-b-2 flex border-yellow max-w-[450px] w-full mx-auto'>
-              <input name="" className='dark:bg-light-gray bg-[#181818] text-text p-3 w-full outline-none border-none shadow-none focus:outline-none text-sm' placeholder='Your Email...'/>
+              <input name="" className='dark:bg-light-gray bg-[#181818] text-text p-4 w-full outline-none border-none shadow-none focus:outline-none text-sm' placeholder='Your Email...'/>
               <button className="bg-yellow px-10 text-black text-sm uppercase whitespace-nowrap font-oswald">Sign up</button>
             </div>
         </div>

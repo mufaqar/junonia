@@ -4,7 +4,7 @@ import { GetWordStr } from "../../utils";
 import { AiOutlineShareAlt } from "react-icons/ai";
 import Link from "next/link";
 
-const PostDesign = ({ post, layout }: any) => {
+const PostDesign = ({ post, layout, home }: any) => {
   return (
     <div
       className={`group overflow-hidden bg-light-gray 
@@ -22,7 +22,7 @@ const PostDesign = ({ post, layout }: any) => {
           width={200}
           height={200}
           className={`w-full group-hover:scale-110 transition-all duration-300 ease-in-out object-cover ${ layout === 2 ? "h-[240px]" : "h-[250px] sm:h-[300px]"}
-            ${ layout === 3 && "sm:h-[340px]" }
+            ${ layout === 3 && home ? 'sm:h-[240px]' : "sm:h-[340px]" }
           `}
         />
         {layout !== 3 && (

@@ -16,13 +16,10 @@ export default function ConatctLayout({
       <body>
         <Header1 />
         <PageBanner
-          title="About Us"
-          subTitle="Lorem ipsum dolor sit amet consectetur adipisicing elit"
+          title="Categories"
           image="/assets/images/contat.jpg"
-          buttontext="By this time"
-          buttonLink="#"
         />
-        {children}
+        <Layout>{children}</Layout>
         <Footer1/>
       </body>
     </html>

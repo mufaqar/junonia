@@ -4,8 +4,8 @@ export const NavLinks = [
           link: '/'
      },
      {
-          name: 'pages',
-          link: '#'
+          name: 'categories',
+          link: '/categories'
      },
      {
           name: 'Blogs',

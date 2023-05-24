@@ -1,4 +1,4 @@
-
+import Layout from "@/components/Layout/Layout";
 import Insta from "@/components/insta";
 import GoogleMap from "@/components/map/googleMap";
 import Button from "@/components/ui/button";
@@ -6,11 +6,9 @@ import Image from "next/image";
 import React from "react";
 
 const ContactUs = () => {
-     
-
   return (
     <>
-      
+      <Layout>
         <form className="mt-12">
           <div className="mt-2 mb-5 md:flex gap-4">
             <input
@@ -81,9 +79,10 @@ const ContactUs = () => {
             </p>
           </div>
         </section>
-      <GoogleMap />
-      <Insta/>
-     
+        <GoogleMap />
+      </Layout>
+
+      <Insta />
     </>
   );
 };
