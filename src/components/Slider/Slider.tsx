@@ -1,6 +1,5 @@
 import React from "react";
 import Slider from "react-slick";
-import { SideBarHeading } from "../aside";
 import Button from "../ui/button";
 import {IoIosArrowForward, IoIosArrowBack} from 'react-icons/io'
 import {CgArrowLongRight} from 'react-icons/cg'
@@ -14,7 +13,9 @@ const SliderComponent = ({ data }: any) => {
     slidesToScroll: 1,
     arrows: false,
   };
-  const slider = React.useRef(null);
+  const slider = React.useRef<Slider>(null);
+
+
   return (
     <>
       <section className="h-screen relative 2xl:h-[800px] blogs">

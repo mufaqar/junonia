@@ -25,7 +25,7 @@ const Main1 = () => {
             {
                post.map((item:any, idx:number)=>{
                     return(
-                      <MainPost post={item} className="text-sm md:text-lg font-oswald"/>
+                      <MainPost post={item} className="text-sm md:text-lg font-oswald" key={idx}/>
                     )
                })
             }

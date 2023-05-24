@@ -159,7 +159,6 @@ const LatestPostSection = ({ posts }: any) => {
               <img
                 src={p?.img}
                 alt="feature"
-               
                 className="h-24 _img object-cover group-hover:scale-110 group-hover:rotate-6 transition-all duration-200"
               />
               </figure>

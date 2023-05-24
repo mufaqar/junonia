@@ -10,7 +10,7 @@ const Insta = () => {
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 mt-10">
         {[1, 2, 3, 4, 5, 6].map((item, idx) => {
           return (
-            <div className="relative group overflow-hidden">
+            <div className="relative group overflow-hidden" key={idx}>
               <Image
                 src={`/assets/images/i${idx}.png`}
                 alt="image"

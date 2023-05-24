@@ -29,9 +29,7 @@ const Blog = () => {
     setPData(res)
   }
 
-  const findcategory = categoriesDate?.find((item)=>item.name.includes(products.slice(0, 4)))
-  console.log("🚀 ~ file: page.tsx:33 ~ Blog ~ findcategory:", findcategory)
- 
+  const findcategory = categoriesDate?.find((item)=>item.name.includes(products.slice(0, 4))) 
 
   return (
     <>
@@ -48,7 +46,7 @@ const Blog = () => {
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
             {PostMokeData.slice(1, 5).map((item, idx) => {
               return (
-                <div>
+                <div key={idx}>
                   <figure className="relative group overflow-hidden">
                     <img
                       src={item?.img}
