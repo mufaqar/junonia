@@ -8,6 +8,7 @@ export const SettingsProvider = ({ children }) => {
   const [searchValue, setSearchValue] = useState('');
   const [windowSize, setWindowSize] = useState([]);
   const [openSide, setOpenSide] = useState(false);
+  const [modalIsOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     const handleWindowResize = () => {
@@ -41,7 +42,8 @@ export const SettingsProvider = ({ children }) => {
         setWindowSize,
         setOpenSide,
         openSide,
-        
+        modalIsOpen,
+        setIsOpen
       }}
     >
       {children}

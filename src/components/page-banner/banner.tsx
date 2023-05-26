@@ -11,6 +11,7 @@ interface IPageBanner {
   image: string;
   buttontext?: string;
   buttonLink?: string | number | any;
+  rounded?: boolean;
 }
 
 const PageBanner = ({
@@ -19,15 +20,15 @@ const PageBanner = ({
   image,
   buttontext,
   buttonLink,
+  rounded
 }: IPageBanner) => {
   return (
     <>
-      <Header1 />
       <div
-        className="h-[450px] bg-cover bg-no-repeat bg-center relative"
+        className={`h-[450px] bg-cover bg-no-repeat bg-center relative ${rounded && 'container mt-40 px-4 md:px-10 mx-auto rounded-[60px]'}`}
         style={{ backgroundImage: `url(${image})` }}
       >
-        <div className="absolute top-0 p-4 flex flex-col justify-center text-white items-center right-0 bottom-0 left-0 bg-black/30">
+        <div className={` absolute top-0 p-4 flex flex-col justify-center text-white items-center right-0 bottom-0 left-0 bg-black/30 ${rounded && 'container px-4 md:px-10 mx-auto rounded-[60px]'}`}>
           <h1 className="text-xl md:text-6xl pt-10 text-yellow font-bold font-poppins capitalize">
             {title}
           </h1>
@@ -35,7 +36,7 @@ const PageBanner = ({
           
           {buttontext && (
             <Link href={buttonLink}>
-              <Button variants="primary" size="medium">
+              <Button variants={`${rounded ? 'primary' : 'outlined'}`} size="medium" rounded={true}>
                 {buttontext}
               </Button>
             </Link>

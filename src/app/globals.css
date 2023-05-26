@@ -106,3 +106,8 @@ margin-top: 50px;
 .p a{
     padding: 8px 14px !important
 }
+.ReactModal__Overlay{
+background: rgba(0, 0, 0, 0.427) !important;
+}
+
+

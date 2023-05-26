@@ -1,9 +1,8 @@
 import Image from 'next/image'
-import Link from 'next/link'
 import React from 'react'
-import { FaFacebookF, FaInstagram,FaLinkedinIn, FaPinterestP,FaDribbble, FaTwitter } from 'react-icons/fa';
 import Logo from '../Logo/Logo';
 import Layout from '../Layout/Layout';
+import Socials from '../ui/socials';
 
 
 const Footer1 = () => {
@@ -24,14 +23,7 @@ const Footer1 = () => {
             <li className='hover:text-yellow'>Blog</li>
             <li className='hover:text-yellow'>Contact</li>
           </ul>
-          <ul className="flex text-text uppercase gap-6">
-            <Link href="#" className='hover:text-yellow'><FaFacebookF/></Link>
-            <Link href="#" className='hover:text-yellow'><FaInstagram/></Link>
-            <Link href="#" className='hover:text-yellow'><FaLinkedinIn/></Link>
-            <Link href="#" className='hover:text-yellow'><FaPinterestP/></Link>
-            <Link href="#" className='hover:text-yellow'><FaDribbble/></Link>
-            <Link href="#" className='hover:text-yellow'><FaTwitter/></Link>
-          </ul>
+          <Socials/>
         </div>
         </Layout>
     </footer>

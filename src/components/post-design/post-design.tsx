@@ -4,10 +4,11 @@ import { GetWordStr } from "../../utils";
 import { AiOutlineShareAlt } from "react-icons/ai";
 import Link from "next/link";
 
-const PostDesign = ({ post, layout, home }: any) => {
+const PostDesign = ({ post, layout, home, rounded }: any) => {
   return (
     <div
-      className={`group overflow-hidden bg-light-gray 
+      className={`group overflow-hidden bg-light-gray shadow-lg
+      ${rounded && 'rounded-3xl overflow-hidden'} 
       ${layout === 2 && "md:flex"}
       ${layout === 3 && "bg-transparent"}
       `}
@@ -26,7 +27,7 @@ const PostDesign = ({ post, layout, home }: any) => {
           `}
         />
         {layout !== 3 && (
-          <div className="absolute top-8 left-0 bg-yellow p-1.5 cursor-pointer px-4 text-sm uppercase text-dark-gray flex items-center">
+          <div className={`absolute top-8 left-0 bg-yellow p-1.5 cursor-pointer px-4 text-sm uppercase text-dark-gray flex items-center ${rounded && 'rounded-full shadow-xl left-4'}`}>
             <AiOutlineShareAlt size={22} /> Share
           </div>
         )}
