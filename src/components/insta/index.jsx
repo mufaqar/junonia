@@ -14,11 +14,11 @@ const Insta = () => {
               <Image
                 src={`/assets/images/i${idx}.png`}
                 alt="image"
-                width={100}
-                height={100}
+                width={500}
+                height={500}
                 className="w-full object-cover h-[250px] transition-all duration-300 ease-in-out group-hover:scale-110"
               />
-              <div className="absolute top-0 right-0 cursor-pointer left-0 bottom-0 bg-black/30" />
+              <div className="absolute top-0 right-0 cursor-pointer left-0 bottom-0 bg-black/20" />
               <div className="absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 z-10 text-yellow hidden group-hover:block"><IoLogoInstagram size={46}/></div>
             </div>
           );

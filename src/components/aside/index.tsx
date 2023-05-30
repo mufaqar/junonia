@@ -91,20 +91,13 @@ const AboutAuthorSection = () => {
       <Image
         src="/assets/images/author.jpeg"
         alt="author"
-        width={100}
-        height={100}
+        width={600}
+        height={600}
         className="w-full mt-4 object-cover h-[150px]"
       />
       <p className="text-center text-sm text-text mt-3">
         Hi! Im Marie dummy text of the printing and typesetting
       </p>
-      <Image
-        src="/assets/images/sig.png"
-        alt="author"
-        width={100}
-        height={100}
-        className="w-full mt-4 object-contain"
-      />
     </div>
   );
 };

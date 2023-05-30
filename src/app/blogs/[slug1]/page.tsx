@@ -44,8 +44,8 @@ const Slug = () => {
               <Image
                 src="/assets/images/Cars.jpg"
                 alt="image"
-                width={100}
-                height={100}
+                width={800}
+                height={800}
                 className="w-full mt-6"
               />
               <p className="absolute bottom-0 right-0 left-0 bg-black/30 p-2 text-gray-300 font-poppins text-sm font-light">
@@ -173,9 +173,13 @@ const Slug = () => {
               })}
             </div>
             <SideBarHeading long={true}> Comments </SideBarHeading>
-            <CommentDesign />
-            <CommentDesign reply={true} />
-            <CommentDesign />
+            {
+              [1,2,3].map((item,idx)=>{
+                return(
+                  <CommentDesign key={idx} id={idx} reply={idx === 1 && true}/>
+                )
+              })
+            }
             <SideBarHeading long={true}> Comment </SideBarHeading>
             <CommentForm />
           </section>
@@ -198,10 +202,10 @@ const Slug = () => {
 
 export default Slug;
 
-const CommentDesign = ({ reply }: any) => {
+const CommentDesign = ({ reply, id }: any) => {
   return (
     <section>
-      <div className={`flex gap-5 mb-8 first:mt-10 ${reply && "pl-12"}`}>
+      <div className={`flex gap-5 mb-8 first:mt-10 w-full ${reply && "pl-12"}`}>
         <figure>
           <Image
             src="/assets/images/avatar.png"
@@ -211,7 +215,7 @@ const CommentDesign = ({ reply }: any) => {
             className="rounded-full"
           />
         </figure>
-        <div className={`border-b-[1px] border-border pb-8`}>
+        <div className={`border-b-[1px] w-full ${id===2 ? 'border-transparent' : 'border-border'}  pb-8`}>
           <div className="flex justify-between ">
             <div>
               <h6 className="uppercase font-poppins">MARIE John </h6>

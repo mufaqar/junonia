@@ -1,6 +1,5 @@
 "use client"
 
-import Image from "next/image";
 import React, { useContext, useEffect, useState } from "react";
 import Link from "next/link";
 import { AiOutlinePlusCircle } from "react-icons/ai";
@@ -20,14 +19,14 @@ const Main1 = () => {
     <>
       <main className="h-[580px] md:grid grid-cols-2 -mt-[60px]">
         <div className="">
-          <MainPost post={PostMokeData[0]} className="text-xl md:text-3xl  font-oswald"/>
+          <MainPost post={PostMokeData[0]} className="text-xl md:text-3xl"/>
         </div>
         <div>
           <div className="grid grid-cols-2 _grid h-full">
             {
                post.map((item:any, idx:number)=>{
                     return(
-                      <MainPost post={item} className="text-sm md:text-lg font-oswald" key={idx}/>
+                      <MainPost post={item} className="text-sm md:text-lg" key={idx}/>
                     )
                })
             }
@@ -43,7 +42,6 @@ const Main1 = () => {
 export default Main1;
 
 const MainPost = ({className, post}:any) => {
-  console.log("🚀 ~ file: main1.tsx:43 ~ MainPost ~ post:", post)
   return (
     <div
       className="relative h-[250px] md:h-full group bg-cover bg-no-repeat md:mt-[56px]"
@@ -52,7 +50,7 @@ const MainPost = ({className, post}:any) => {
       <div className="absolute top-0 right-0 p-4 md:p-10 flex flex-col justify-end left-0 bottom-0 bg-black/30">
         <span className="text-yellow text-xs md:text-base uppercase">Extreme</span>
         <Link href="#">
-        <h2 className={`uppercase group-hover:underline group-hover:text-yellow mt-2 max-w-[480px] text-white ${className}`}>
+        <h2 className={`uppercase group-hover:underline group-hover:text-yellow mt-2 max-w-[480px]  text-white ${className}`}>
           {post?.title}
         </h2>
         </Link>

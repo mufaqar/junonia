@@ -70,7 +70,7 @@ const Header2 = () => {
             </div>
           </div>
         </div>
-        <div className="bg-light-gray md:py-4 mt-10">
+        <div className="bg-light-gray md:py-4 mt-10 flex justify-center z-50">
           <ul
             className={`gap-7 mr-4 items-center ${
               isMobile
@@ -80,7 +80,7 @@ const Header2 = () => {
           >
             <li className="group relative">
               <div className="flex items-center gap-2">
-                <Link href="#" className="uppercase text-white">
+                <Link href="#" className="uppercase dark:text-white text-black ">
                   Home
                 </Link>
                 <SlArrowDown />
@@ -92,7 +92,7 @@ const Header2 = () => {
             </li>
             <li className="group relative">
               <div className="flex items-center gap-2">
-                <Link href="#" className="uppercase text-white">
+                <Link href="#" className="uppercase dark:text-white text-black ">
                   Pages
                 </Link>
                 <SlArrowDown />
@@ -107,17 +107,17 @@ const Header2 = () => {
               </SubMenu>
             </li>
             <li>
-              <Link href="/about-us" className="uppercase text-white">
+              <Link href="/about-us" className="uppercase dark:text-white text-black ">
                 About Us
               </Link>
             </li>
             <li>
-              <Link href="/Categories" className="uppercase text-white">
+              <Link href="/Categories" className="uppercase dark:text-white text-black ">
                 Categories
               </Link>
             </li>
             <li>
-              <Link href="/contsct-us" className="uppercase text-white">
+              <Link href="/contsct-us" className="uppercase dark:text-white text-black ">
                 Contact Us
               </Link>
             </li>

@@ -18,8 +18,8 @@ const PostDesign2 = () => {
               <Image
                 src={item?.img}
                 alt="image"
-                width={400}
-                height={400}
+                width={700}
+                height={700}
                 className="h-40 sm:h-60 group-hover:scale-110 xl:h-80 w-full object-cover transition-all duration-200 ease-in-out"
               />
             </figure>
