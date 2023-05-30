@@ -1,3 +1,5 @@
+"use client";
+
 import Layout from '@/components/Layout/Layout';
 import Aside from '@/components/aside';
 import Footer1 from '@/components/footer';
