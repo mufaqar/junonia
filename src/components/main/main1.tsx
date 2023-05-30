@@ -47,7 +47,7 @@ const MainPost = ({className, post}:any) => {
       className="relative h-[250px] md:h-full group bg-cover bg-no-repeat md:mt-[56px]"
       style={{ backgroundImage: `url(${post?.img})`}}
     >
-      <div className="absolute top-0 right-0 p-4 md:p-10 flex flex-col justify-end left-0 bottom-0 bg-black/30">
+      <div className="absolute top-0 right-0 p-4 md:p-10 flex flex-col justify-end left-0 bottom-0 bg-black/20 group-hover:bg-black/30">
         <span className="text-yellow text-xs md:text-base uppercase">Extreme</span>
         <Link href="#">
         <h2 className={`uppercase group-hover:underline group-hover:text-yellow mt-2 max-w-[480px]  text-white ${className}`}>

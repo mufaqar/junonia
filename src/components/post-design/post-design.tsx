@@ -44,7 +44,7 @@ const PostDesign = ({ post, layout, home, rounded }: any) => {
             By Danial Alam - <span className="uppercase">22 December</span>
           </p>
           <h2
-            className={`text-[18px] font-medium font-poppins ${
+            className={`text-[18px] font-medium capitalize font-poppins ${
               layout === 3
                 ? " mb-3 leading-6"
                 : " text-pure leading-7 mt-2"
