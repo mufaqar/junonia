@@ -92,7 +92,7 @@ const Header1 = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/contsct-us" className="uppercase text-white">
+                <Link href="/contact-us" className="uppercase text-white">
                   Contact Us
                 </Link>
               </li>

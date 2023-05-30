@@ -17,7 +17,7 @@ export default function ConatctLayout({
         <PageBanner
           title="Contact Us"
           subTitle="Lorem ipsum dolor sit amet consectetur adipisicing elit"
-          image="/assets/images/contat.jpg"
+          image="/assets/images/contactus.jpg"
           buttontext="By this time"
           buttonLink="#"
         />

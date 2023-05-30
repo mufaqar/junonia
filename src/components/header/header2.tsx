@@ -117,7 +117,7 @@ const Header2 = () => {
               </Link>
             </li>
             <li>
-              <Link href="/contsct-us" className="uppercase dark:text-white text-black ">
+              <Link href="/contact-us" className="uppercase dark:text-white text-black ">
                 Contact Us
               </Link>
             </li>
