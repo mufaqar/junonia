@@ -42,7 +42,7 @@ const Home2 = () => {
                       className=" transition-all duration-300  ease-in-out object-cover hover:scale-110 w-32 h-32 sm:w-40 sm:h-40"
                     />
                   </figure>
-                  <h4 className="text-center font-normal bg-light-blue p-1 px-3 rounded-full  mt-3 capitalize text-white">
+                  <h4 className="text-center font-normal bg-yellow p-1 px-3 rounded-full  mt-3 capitalize text-black">
                     {item?.name}
                   </h4>
                 </Link>
