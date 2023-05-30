@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useContext, useEffect, useState } from "react";
 import Logo from "../Logo/Logo";
 import Link from "next/link";
@@ -64,6 +64,37 @@ const Header1 = () => {
                   <Route to="/home/home1">home 1</Route>
                   <Route to="/home/home2">home 2</Route>
                 </SubMenu>
+              </li>
+              <li className="group relative">
+                <div className="flex items-center gap-2">
+                  <Link href="#" className="uppercase text-white">
+                    Pages
+                  </Link>
+                  <SlArrowDown />
+                </div>
+                <SubMenu>
+                  <Route to="/blogs">Blogs 1</Route>
+                  <Route to="/blogs2">Blogs 2</Route>
+                  <Route to="/blogs/single-post">Single Post 1</Route>
+                  <Route to="/blogs2/single-post">Single Post 2</Route>
+                  <Route to="/category/Electronics">Filter Posts</Route>
+                  <Route to="/404">404</Route>
+                </SubMenu>
+              </li>
+              <li>
+                <Link href="/about-us" className="uppercase text-white">
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link href="/Categories" className="uppercase text-white">
+                  Categories
+                </Link>
+              </li>
+              <li>
+                <Link href="/contsct-us" className="uppercase text-white">
+                  Contact Us
+                </Link>
               </li>
             </ul>
             <BiSearch

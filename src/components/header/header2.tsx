@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import React, { useContext, useEffect, useState } from "react";
 import Logo from "../Logo/Logo";
@@ -13,6 +13,9 @@ import Input from "../controlls/input";
 import { HiOutlineMenu } from "react-icons/hi";
 import SideSection from "../side-section/side-section";
 import Socials from "../ui/socials";
+import { SlArrowDown } from "react-icons/sl";
+import SubMenu from "./subMenu";
+import Route from "./route";
 
 const Header2 = () => {
   const {
@@ -68,25 +71,57 @@ const Header2 = () => {
           </div>
         </div>
         <div className="bg-light-gray md:py-4 mt-10">
-          <nav
-            className={` container px-4 md:px-10 mx-auto gap-10 flex justify-center items-center ${
+          <ul
+            className={`gap-7 mr-4 items-center ${
               isMobile
                 ? "absolute top-12 flex flex-col gap-6 p-10 left-0 right-0 bg-light-gray w-full"
                 : "hidden md:flex"
             }`}
           >
-            {NavLinks.map((item: NavLinksType, idx: number) => {
-              return (
-                <Link
-                  href={item.link}
-                  className="uppercase text-black dark:text-white"
-                  key={idx}
-                >
-                  {item.name}
+            <li className="group relative">
+              <div className="flex items-center gap-2">
+                <Link href="#" className="uppercase text-white">
+                  Home
                 </Link>
-              );
-            })}
-          </nav>
+                <SlArrowDown />
+              </div>
+              <SubMenu>
+                <Route to="/home/home1">home 1</Route>
+                <Route to="/home/home2">home 2</Route>
+              </SubMenu>
+            </li>
+            <li className="group relative">
+              <div className="flex items-center gap-2">
+                <Link href="#" className="uppercase text-white">
+                  Pages
+                </Link>
+                <SlArrowDown />
+              </div>
+              <SubMenu>
+                <Route to="/blogs">Blogs 1</Route>
+                <Route to="/blogs2">Blogs 2</Route>
+                <Route to="/blogs/single-post">Single Post 1</Route>
+                <Route to="/blogs2/single-post">Single Post 2</Route>
+                <Route to="/category/Electronics">Filter Posts</Route>
+                <Route to="/404">404</Route>
+              </SubMenu>
+            </li>
+            <li>
+              <Link href="/about-us" className="uppercase text-white">
+                About Us
+              </Link>
+            </li>
+            <li>
+              <Link href="/Categories" className="uppercase text-white">
+                Categories
+              </Link>
+            </li>
+            <li>
+              <Link href="/contsct-us" className="uppercase text-white">
+                Contact Us
+              </Link>
+            </li>
+          </ul>
         </div>
       </header>
 
