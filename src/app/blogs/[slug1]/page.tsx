@@ -3,6 +3,7 @@
 import Layout from "@/components/Layout/Layout";
 import Aside, { SideBarHeading } from "@/components/aside";
 import Footer1 from "@/components/footer";
+import Header1 from "@/components/header/header1";
 import Insta from "@/components/insta";
 import PageBanner from "@/components/page-banner/banner";
 import PostDesign from "@/components/post-design/post-design";
@@ -23,6 +24,7 @@ import { SlCalender } from "react-icons/sl";
 const Slug = () => {
   return (
     <>
+    <Header1/>
       <PageBanner
         title="Lorem ipsum dolor sit amet consectetur"
         subTitle="Lorem ipsum dolor sit amet consectetur adipisicing elit"

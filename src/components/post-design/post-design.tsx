@@ -7,10 +7,10 @@ import Link from "next/link";
 const PostDesign = ({ post, layout, home, rounded }: any) => {
   return (
     <div
-      className={`group overflow-hidden bg-light-gray shadow-lg
+      className={`group overflow-hidden bg-light-gray shadow-md dark:shadow-lg
       ${rounded && 'rounded-3xl overflow-hidden'} 
       ${layout === 2 && "md:flex"}
-      ${layout === 3 && "bg-transparent"}
+      ${layout === 3 && "bg-transparent !shadow-none"}
       `}
     > 
       <Link href={`/blogs/${post.title}`}>

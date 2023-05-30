@@ -1,3 +1,5 @@
+"use client"
+
 import React, { useContext, useEffect, useState } from "react";
 import Logo from "../Logo/Logo";
 import Link from "next/link";

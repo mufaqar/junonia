@@ -5,7 +5,7 @@ import Pagination from "@/components/Pagination/pagination";
 import Slider from "@/components/Slider/Slider";
 import { SideBarHeading } from "@/components/aside";
 import Footer1 from "@/components/footer";
-import Header1 from "@/components/header/header1";
+import Header2 from "@/components/header/header2";
 import PageBanner from "@/components/page-banner/banner";
 import PostDesign from "@/components/post-design/post-design";
 import Button from "@/components/ui/button";
@@ -20,7 +20,7 @@ import {
 } from "react-icons/ai";
 
 
-const Blog = () => {
+const Blog2 = () => {
 
   const [pData, setPData] = useState<any>()
   const PaginatedData =(res:any) => {
@@ -30,14 +30,12 @@ const Blog = () => {
 
   return (
     <>
-      <Header1 />
+      <Header2 />
       
       <PageBanner
-          title="Contact Us"
+          title="Blogs"
           subTitle="Lorem ipsum dolor sit amet consectetur adipisicing elit"
           image="/assets/images/contat.jpg"
-          buttontext="By this time"
-          buttonLink="#"
           rounded={true}
         />
       <Layout>
@@ -102,7 +100,7 @@ const Blog = () => {
               if (idx === 3) {
                 return (
                   <div
-                    className="relative bg-light-gray bg-cover"
+                    className="relative bg-light-gray bg-cover rounded-3xl overflow-hidden"
                     key={idx}
                     style={{ backgroundImage: `url(${post?.img})` }}
                   >
@@ -136,7 +134,7 @@ const Blog = () => {
                 );
               } else {
                 return (
-                  <PostDesign post={post} idx={idx} layout={3} key={idx} />
+                  <PostDesign post={post} idx={idx} key={idx} rounded={true}/>
                 );
               }
             })}
@@ -149,4 +147,4 @@ const Blog = () => {
   );
 };
 
-export default Blog;
+export default Blog2;
