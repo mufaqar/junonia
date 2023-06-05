@@ -20,11 +20,11 @@ const PostDesign2 = () => {
                 alt="image"
                 width={700}
                 height={700}
-                className="h-40 sm:h-60 group-hover:scale-110 xl:h-80 w-full object-cover transition-all duration-200 ease-in-out"
+                className="h-80 group-hover:scale-110  w-full object-cover transition-all duration-200 ease-in-out"
               />
             </figure>
             <div className="px-4">
-              <div className="bg-white shadow-xl p-5 dark:bg-light-gray relative -mt-28 z-10 rounded-3xl overflow-hidden">
+              <div className="bg-white shadow-xl p-5 dark:bg-light-gray relative -mt-20 md:-mt-28 z-10 rounded-3xl overflow-hidden">
               <p className="text-yellow rounded-3xl font-poppins uppercase font-light ">
                 {item?.categories}
               </p>

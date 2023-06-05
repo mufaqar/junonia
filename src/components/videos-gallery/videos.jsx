@@ -1,9 +1,9 @@
 import Image from "next/image";
 import React, { useContext } from "react";
-import ReactPlayer from "react-player";
 import { BsPlayCircle } from "react-icons/bs";
 import Modal from "react-modal";
 import { SettingsContext } from "@/context/setting-context";
+import {RxCross1} from "react-icons/rx"
 
 const VideosGallery = () => {
   const { modalIsOpen, setIsOpen } = useContext(SettingsContext);
@@ -82,13 +82,9 @@ const VideoModelBox = () => {
 
   const customStyles = {
     content: {
-      top: "50%",
-      left: "50%",
-      right: "auto",
-      bottom: "auto",
-      marginRight: "-50%",
-      transform: "translate(-50%, -50%)",
-      backgroundImage: "transparent",
+      
+      backgroundColor: "transparent",
+      border:'none'
     },
   };
   function closeModal() {
@@ -101,14 +97,9 @@ const VideoModelBox = () => {
         onRequestClose={closeModal}
         style={customStyles}
       >
-        <button onClick={closeModal}>close</button>
+        <button onClick={closeModal} className="w-full flex justify-end mb-2"><RxCross1 className="bg-yellow p-1 rounded-sm" size={30}/></button>
         <div className="player-wrapper">
-          <ReactPlayer
-            className="react-player"
-            url="https://www.youtube.com/watch?v=ysz5S6PUM-U"
-            width="100%"
-            height="100%"
-          />
+        <iframe class="responsive-iframe" src="https://www.youtube.com/embed/tgbNymZ7vqY" allowFullScreen></iframe>
         </div>
       </Modal>
     </div>

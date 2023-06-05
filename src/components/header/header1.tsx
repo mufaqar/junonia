@@ -47,9 +47,9 @@ const Header1 = () => {
           <Logo />
           <div className="flex text-white">
             <ul
-              className={`gap-7 mr-4 items-center ${
+              className={`gap-7 mr-4 md:items-center w-full ${
                 isMobile
-                  ? "absolute top-12 flex flex-col gap-6 p-10 left-0 right-0 bg-light-gray w-full"
+                  ? "absolute top-[52px] flex flex-col gap-6 p-10 left-0 right-0 bg-black dark:bg-light-gray w-full"
                   : "hidden md:flex"
               }`}
             >

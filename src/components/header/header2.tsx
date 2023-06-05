@@ -72,13 +72,13 @@ const Header2 = () => {
         </div>
         <div className="bg-light-gray md:py-4 mt-10 flex justify-center z-50">
           <ul
-            className={`gap-7 mr-4 items-center ${
+            className={`gap-7 mr-4 md:items-center z-10 ${
               isMobile
-                ? "absolute top-12 flex flex-col gap-6 p-10 left-0 right-0 bg-light-gray w-full"
+                ? "absolute top-[52px] flex flex-col gap-6 p-10 left-0 right-0 bg-light-gray w-full"
                 : "hidden md:flex"
             }`}
           >
-            <li className="group relative">
+            <li className="group relative w-full">
               <div className="flex items-center gap-2">
                 <Link href="#" className="uppercase dark:text-white text-black ">
                   Home
@@ -90,7 +90,7 @@ const Header2 = () => {
                 <Route to="/home/home2">home 2</Route>
               </SubMenu>
             </li>
-            <li className="group relative">
+            <li className="group relative w-full">
               <div className="flex items-center gap-2">
                 <Link href="#" className="uppercase dark:text-white text-black ">
                   Pages
@@ -106,17 +106,17 @@ const Header2 = () => {
                 <Route to="/404">404</Route>
               </SubMenu>
             </li>
-            <li>
+            <li className="w-full">
               <Link href="/about-us" className="uppercase dark:text-white text-black ">
                 About Us
               </Link>
             </li>
-            <li>
+            <li className="w-full">
               <Link href="/Categories" className="uppercase dark:text-white text-black ">
                 Categories
               </Link>
             </li>
-            <li>
+            <li className="w-full">
               <Link href="/contact-us" className="uppercase dark:text-white text-black ">
                 Contact Us
               </Link>

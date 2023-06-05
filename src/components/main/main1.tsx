@@ -17,7 +17,7 @@ const Main1 = () => {
 
   return (
     <>
-      <main className="h-[580px] md:grid grid-cols-2 -mt-[60px]">
+      <main className="md:h-[620px] md:grid grid-cols-2 -mt-[60px]">
         <div className="">
           <MainPost post={PostMokeData[0]} className="text-xl md:text-3xl"/>
         </div>
@@ -44,7 +44,7 @@ export default Main1;
 const MainPost = ({className, post}:any) => {
   return (
     <div
-      className="relative h-[250px] md:h-full group bg-cover bg-no-repeat md:mt-[56px]"
+      className="relative h-[400px] md:h-full group bg-cover bg-no-repeat md:mt-[56px]"
       style={{ backgroundImage: `url(${post?.img})`}}
     >
       <div className="absolute top-0 right-0 p-4 md:p-10 flex flex-col justify-end left-0 bottom-0 bg-black/20 group-hover:bg-black/30">
