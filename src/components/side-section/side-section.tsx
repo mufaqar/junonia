@@ -5,6 +5,7 @@ import Logo from "../Logo/Logo";
 import Socials from "../ui/socials";
 import { AiOutlinePhone } from "react-icons/ai";
 import { BsEnvelopeAt } from "react-icons/bs";
+import Image from "next/image";
 
 const SideSection = () => {
   const { openSide, setOpenSide } = useContext(SettingsContext);
@@ -17,7 +18,7 @@ const SideSection = () => {
         }}
       />
       <div className="mt-10 sideInfo">
-        <Logo />
+        <Image src="/assets/images/logo-white.png" alt="logo" width={160} height={60} className="dark:invert-0 mx-auto"/>
       </div>
       <p className="text-text mt-6">
         Lorem Ipsum is simply dummy text of the printing and typesetting
