@@ -78,7 +78,7 @@ const Header2 = () => {
                 : "hidden md:flex"
             }`}
           >
-            <li className="group relative w-full">
+            <li className="group relative">
               <div className="flex items-center gap-2">
                 <Link href="#" className="uppercase dark:text-white text-black ">
                   Home
@@ -90,7 +90,7 @@ const Header2 = () => {
                 <Route to="/home/home2">home 2</Route>
               </SubMenu>
             </li>
-            <li className="group relative w-full">
+            <li className="group relative">
               <div className="flex items-center gap-2">
                 <Link href="#" className="uppercase dark:text-white text-black ">
                   Pages
@@ -106,17 +106,17 @@ const Header2 = () => {
                 <Route to="/404">404</Route>
               </SubMenu>
             </li>
-            <li className="w-full">
+            <li>
               <Link href="/about-us" className="uppercase dark:text-white text-black ">
                 About Us
               </Link>
             </li>
-            <li className="w-full">
+            <li>
               <Link href="/Categories" className="uppercase dark:text-white text-black ">
                 Categories
               </Link>
             </li>
-            <li className="w-full">
+            <li>
               <Link href="/contact-us" className="uppercase dark:text-white text-black ">
                 Contact Us
               </Link>
