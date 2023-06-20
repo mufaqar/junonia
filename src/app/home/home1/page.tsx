@@ -49,7 +49,7 @@ const Home1 = () => {
       </section>
       </Layout> 
       <Insta/>
-      <Footer2/>
+      <Footer1/>
     </>
   )
 }

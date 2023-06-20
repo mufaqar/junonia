@@ -10,7 +10,7 @@ const Footer1 = () => {
     <footer className='mt-20'>
       <Layout>
         <div className='flex items-center justify-center flex-col mb-10'>
-            <Logo/>
+            <Image src="/assets/images/logo-white.png" alt="logo" width={160} height={60} className="invert dark:invert-0 mx-auto"/>
             <p className='mt-4 uppercase text-text text-sm font-poppins text-center'>SUBSCRIBE FOR WEEKLY UPDATES AND EXCLUSIVE OFFERS</p>
             <div className='mt-5 border-b-2 flex border-yellow max-w-[450px] w-full mx-auto'>
               <input name="" className='dark:bg-light-gray bg-[#181818] text-text p-4 w-full outline-none border-none shadow-none focus:outline-none text-sm' placeholder='Your Email...'/>
