@@ -3,6 +3,7 @@
 import Layout from '@/components/Layout/Layout';
 import Aside from '@/components/aside';
 import Footer1 from '@/components/footer';
+import Footer2 from '@/components/footer/Footer2';
 import Header1 from '@/components/header/header1';
 import Insta from '@/components/insta';
 import Main1 from '@/components/main/main1';
@@ -48,7 +49,7 @@ const Home1 = () => {
       </section>
       </Layout> 
       <Insta/>
-      <Footer1/>
+      <Footer2/>
     </>
   )
 }

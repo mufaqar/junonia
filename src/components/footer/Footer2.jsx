@@ -1,5 +1,6 @@
 import React from 'react'
 import Logo from '../Logo/Logo'
+import Image from 'next/image'
 
 const Footer2 = () => {
   return (
@@ -92,7 +93,7 @@ const Footer2 = () => {
             </div>
             <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8"/>
             <div className="text-center flex flex-col justify-center items-center">
-                <Logo/>
+            <Image src="/assets/images/logo-white.png" alt="logo" width={160} height={60} className="invert dark:invert-0 mx-auto"/>
                 <span className="block text-sm text-center text-gray-500 dark:text-gray-400 mt-4">© 2021-2022 <a href="#"
                         className="hover:underline">Flowbite™</a>. All Rights Reserved.
                 </span>

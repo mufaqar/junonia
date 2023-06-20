@@ -4,7 +4,7 @@ import {IoLogoInstagram} from 'react-icons/io'
 
 const Insta = () => {
   return (
-    <div className="my-10">
+    <div className="mt-10">
       <h2 className="text-2xl uppercase text-center font-oswald">I'm on Instagram</h2>
       <p className="text-center text-text  text-gray-600">@xpertdesigner</p>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 mt-10">
