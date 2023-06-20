@@ -12,8 +12,7 @@ export default function ConatctLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body>
+   <>
         <Header1 />
         <PageBanner
           title="Categories"
@@ -21,7 +20,6 @@ export default function ConatctLayout({
         />
         <Layout>{children}</Layout>
         <Footer1/>
-      </body>
-    </html>
+        </>
   );
 }

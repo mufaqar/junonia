@@ -11,8 +11,7 @@ export default function ConatctLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body>
+    <>
         <Header1 />
         <PageBanner
           title="Contact Us"
@@ -23,7 +22,6 @@ export default function ConatctLayout({
         />
         {children}
         <Footer1/>
-      </body>
-    </html>
+        </>
   );
 }
