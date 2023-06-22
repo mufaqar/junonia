@@ -87,7 +87,7 @@ const Header1 = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/Categories" className="uppercase text-white">
+                <Link href="/categories" className="uppercase text-white">
                   Categories
                 </Link>
               </li>
