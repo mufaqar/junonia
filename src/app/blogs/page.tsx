@@ -25,7 +25,6 @@ const Blog = () => {
   const PaginatedData =(res:any) => {
     setPData(res)
   }
-  
 
   return (
     <>
@@ -57,19 +56,19 @@ const Blog = () => {
                         <span className="text-sm md:text-base">View More</span>
                       </div>
                       <Link
-                        href={item?.title}
+                        href={`/blogs/${item?.title}`}
                         className="text-white flex gap-5 text-sm md:text-base justify-center item-center absolute bottom-2 pt-2 md:bottom-4 w-full border-t-[1px] border-gray-300 md:pt-4"
                       >
                         <span className="flex items-center gap-1">
                           <i>
                             <AiOutlineClockCircle />
-                          </i>{" "}
+                          </i>
                           2 .
                         </span>
                         <span className="flex items-center gap-1">
                           <i>
                             <AiOutlineEye className="text-lg" />
-                          </i>{" "}
+                          </i>
                           1.3k
                         </span>
                       </Link>
@@ -78,7 +77,7 @@ const Blog = () => {
                   <p className="mt-3 text-center font-poppins uppercase font-light text-gray-400">
                     {item?.categories}
                   </p>
-                  <Link href={item?.title}>
+                  <Link href={`/blogs/${item?.title}`}>
                     <h2 className="text-center font-poppins text-lg">
                       {item?.title}
                     </h2>

@@ -1,12 +1,16 @@
-"use client";
-
 import Layout from "@/components/Layout/Layout";
 import Footer1 from "@/components/footer";
 import Header1 from "@/components/header/header1";
 import PageBanner from "@/components/page-banner/banner";
+import { Metadata } from "next";
 import React from "react";
 
-export default function ConatctLayout({
+export const metadata: Metadata = {
+  title: "Caterories | Junonia",
+  description: "",
+};
+
+export default function CateroriesLayout({
   children,
 }: {
   children: React.ReactNode;

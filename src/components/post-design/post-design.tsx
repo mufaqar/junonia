@@ -50,7 +50,7 @@ const PostDesign = ({ post, layout, home, rounded }: any) => {
                 : " text-pure leading-7 mt-2"
             }`}
           >
-            {post.title}
+            <Link href={`/blogs/${post?.title}`}>{post.title}</Link>
           </h2>
         </div>
         {layout !== 3 && (

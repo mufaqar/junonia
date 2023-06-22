@@ -1,9 +1,15 @@
-"use client";
-
 import Footer1 from "@/components/footer";
 import Header1 from "@/components/header/header1";
 import PageBanner from "@/components/page-banner/banner";
+import { Metadata } from "next";
 import React from "react";
+
+
+export const metadata: Metadata = {
+  title: "Contact us | Junonia",
+  description: "",
+};
+
 
 export default function ConatctLayout({
   children,
