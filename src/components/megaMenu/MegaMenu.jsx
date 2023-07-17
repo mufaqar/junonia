@@ -56,7 +56,7 @@ const MegaMenu = () => {
                     <div className="lg:block hidden w-1/4 ">
                          <h2 className='text-xl uppercase mb-4 underline font-oswald'>Gallery</h2>
                          <div className="grid grid-cols-2 gap-3">
-                              {gallery.slice(0,12).map(image,id => (
+                              {gallery.slice(0,12).map((image,id) => (
                                    <img src={image} key={id} alt="image" className="w-[260px] h-[100px]" />
                               ))}
                          </div>
