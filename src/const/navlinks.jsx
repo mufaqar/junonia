@@ -8,7 +8,7 @@ export const NavLinks = [
           link: '/categories'
      },
      {
-          name: 'Blogs',
+          name: 'Blog',
           link: '/blogs'
      },
      {
