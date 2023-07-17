@@ -48,3 +48,29 @@ export const categoriesDate = [
     image: "Pets.jpeg",
   },
 ];
+
+
+export const Tags = [
+  {
+    name: "Social",
+  },
+  {
+    name: "Business",
+  },
+  {
+    name: "Space News",
+  },
+  {
+    name: "Traffic",
+  },
+  {
+    name: "Artificial Self Controll",
+  },
+  {
+    name: "World War 3",
+  },
+  {
+    name: "Global Politics",
+  }
+
+]

@@ -11,6 +11,7 @@ export const SettingsProvider = ({ children }) => {
   const [windowSize, setWindowSize] = useState([]);
   const [openSide, setOpenSide] = useState(false);
   const [modalIsOpen, setIsOpen] = useState(false);
+  const [OpenMegaMenu, setOpenMegaMenu] = useState(false);
 
   useEffect(() => {
     const handleWindowResize = () => {
@@ -45,7 +46,9 @@ export const SettingsProvider = ({ children }) => {
         setOpenSide,
         openSide,
         modalIsOpen,
-        setIsOpen
+        setIsOpen,
+        setOpenMegaMenu,
+        OpenMegaMenu
       }}
     >
       {children}

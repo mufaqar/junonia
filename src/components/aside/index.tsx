@@ -140,7 +140,7 @@ const NewsLetterSection = () => {
   );
 };
 
-const LatestPostSection = ({ posts }: any) => {
+export const LatestPostSection = ({ posts }: any) => {
   return (
     <div className="mt-10 px-7">
       <SideBarHeading> latest posts </SideBarHeading>

@@ -47,7 +47,7 @@ const SliderComponent = ({ data }: any) => {
         })}
       </Slider>
       <button className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-dark-gray active:scale-105 text-yellow text-xl p-[6px] px-5 " onClick={() => slider?.current?.slickPrev()}><IoIosArrowBack/></button>
-     <button className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-dark-gray active:scale-105 text-yellow text-xl p-[6px] px-5 " onClick={() => slider?.current?.slickNext()}><IoIosArrowForward /></button>
+      <button className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-dark-gray active:scale-105 text-yellow text-xl p-[6px] px-5 " onClick={() => slider?.current?.slickNext()}><IoIosArrowForward /></button>
      </section>   
     </>
   );

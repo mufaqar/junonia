@@ -12,6 +12,7 @@ import SideSection from "../side-section/side-section";
 import SubMenu from "./subMenu";
 import Route from "./route";
 import { SlArrowDown } from "react-icons/sl";
+import MegaMenu from '../megaMenu/MegaMenu'
 
 const Header1 = () => {
   const {
@@ -21,6 +22,8 @@ const Header1 = () => {
     setIsMobile,
     setOpenSide,
     openSide,
+    setOpenMegaMenu,
+    OpenMegaMenu
   } = useContext(SettingsContext);
 
   const [scrollTop, setScrollTop] = useState<any>(0);
@@ -35,6 +38,10 @@ const Header1 = () => {
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, [scrollTop]);
+
+  const handleMegaMenu = ()=>{
+    setOpenMegaMenu(!OpenMegaMenu)
+  }
 
   return (
     <>
@@ -87,9 +94,9 @@ const Header1 = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/categories" className="uppercase text-white">
+                <button onClick={()=>handleMegaMenu()} className="uppercase text-white">
                   Categories
-                </Link>
+                </button>
               </li>
               <li>
                 <Link href="/contact-us" className="uppercase text-white">
@@ -133,6 +140,7 @@ const Header1 = () => {
       >
         <SideSection />
       </section>
+      {!OpenMegaMenu && <MegaMenu/> }
     </>
   );
 };
