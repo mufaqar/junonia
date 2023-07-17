@@ -32,7 +32,7 @@ const Home1 = () => {
               return <PostDesign post={post} idx={idx} layout={2} key={idx} />;
             })}
           </div>
-          <div className="pt-[1px] bg-border my-16" />
+          <div className="pt-[1px] bg-border my-16 mb-8" />
           <h2 className='text-3xl uppercase mb-6 font-oswald'>News</h2>
           <div className="grid gap-6 md:grid-cols-3">
             {PostMokeData.slice(9, 12).map((post, idx) => {
