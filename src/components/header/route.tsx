@@ -12,7 +12,7 @@ const Route = ({ children, to, subChild }: any) => {
   }
 
   return (
-    <li className='py-3 md:border relative md:border-border !border-b-0 px-4' onMouseEnter={()=>HandleSubNav(children)}>
+    <li className='py-3 md:border relative md:border-border !border-b-0 px-4' onMouseEnter={()=>HandleSubNav(children)} onMouseLeave={()=>setOpenSubChild('')}>
       <RouteLink children={children} to={to} subChild={subChild}/>
       {
         OpenSubChild === children[0] && subChild?.length > 1 && <SubMenu>
