@@ -21,21 +21,21 @@ const Home1 = () => {
         <section className="lg:w-[73%]">
           <h2 className='text-3xl uppercase mb-6 font-oswald'>Latest Article</h2>
           <div className="grid gap-6 md:grid-cols-2">
-            {PostMokeData.slice(3, 7).map((post, idx) => {
+            {PostMokeData.slice(0, 4).map((post, idx) => {
               return <PostDesign post={post} idx={idx} key={idx} />;
             })}
           </div>
           <div className="pt-[1px] bg-border my-16 mb-8" />
           <h2 className='text-3xl uppercase mb-6 font-oswald'>Top Trending Article</h2>
           <div className="flex gap-6 flex-col">
-            {PostMokeData.slice(7, 9).map((post, idx) => {
+            {PostMokeData.slice(4, 7).map((post, idx) => {
               return <PostDesign post={post} idx={idx} layout={2} key={idx} />;
             })}
           </div>
           <div className="pt-[1px] bg-border my-16 mb-8" />
           <h2 className='text-3xl uppercase mb-6 font-oswald'>News</h2>
           <div className="grid gap-6 md:grid-cols-3">
-            {PostMokeData.slice(9, 12).map((post, idx) => {
+            {PostMokeData.slice(7, 10).map((post, idx) => {
               return <PostDesign post={post} idx={idx} home={true} layout={3} key={idx} />;
             })}
           </div>

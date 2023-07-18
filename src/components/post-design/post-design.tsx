@@ -23,7 +23,7 @@ const PostDesign = ({ post, layout, home, rounded }: any) => {
             alt=""
             width={700}
             height={700}
-            className={`w-full group-hover:scale-110 transition-all duration-300 ease-in-out object-cover ${layout === 2 ? "h-[240px]" : "h-[250px] sm:h-[300px]"}
+            className={`w-full group-hover:scale-110 transition-all duration-300 ease-in-out object-cover ${layout === 2 ? "h-[240px] w-full md:w-[370px]" : "h-[250px] sm:h-[300px]"}
             ${layout === 3 && home ? 'sm:h-[240px]' : "sm:h-[340px]"}
           `}
           />
