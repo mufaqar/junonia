@@ -68,8 +68,8 @@ const Header1 = () => {
                   <SlArrowDown />
                 </div>
                 <SubMenu>
-                  <Route to="/home/home1">home 1</Route>
-                  <Route to="/home/home2">home 2</Route>
+                  <Route to="/home/home1">home page 1</Route>
+                  <Route to="/home/home2">home page 2</Route>
                 </SubMenu>
               </li>
               <li className="group relative">
@@ -80,12 +80,14 @@ const Header1 = () => {
                   <SlArrowDown />
                 </div>
                 <SubMenu>
-                  <Route to="/blogs">Blogs 1</Route>
-                  <Route to="/blogs2">Blogs 2</Route>
-                  <Route to="/blogs/single-post">Single Post 1</Route>
-                  <Route to="/blogs2/single-post">Single Post 2</Route>
-                  <Route to="/category/Electronics">Filter Posts</Route>
-                  <Route to="/404">404</Route>
+                  <Route to="/blogs">Blogs Page 1</Route>
+                  <Route to="/blogs2">Blogs Page 2</Route>
+                  <Route to="/blogs/single-post">Post Layout 1</Route>
+                  <Route to="/blogs2/single-post">Post Layout 2</Route>
+                  <Route to="/categories">Categories Page</Route>
+                  <Route to="/category/Electronics">Category Filter Page</Route>
+                  <Route to="/author">Author Page</Route>
+                  <Route to="/404">404 Page</Route>
                 </SubMenu>
               </li>
               <li>
@@ -95,7 +97,7 @@ const Header1 = () => {
               </li>
               <li>
                 <button onClick={()=>handleMegaMenu()} className="uppercase text-white">
-                  Categories
+                  Mega Menu
                 </button>
               </li>
               <li>
@@ -140,7 +142,7 @@ const Header1 = () => {
       >
         <SideSection />
       </section>
-      {OpenMegaMenu && <MegaMenu/> }
+      {!OpenMegaMenu && <MegaMenu/> }
     </>
   );
 };

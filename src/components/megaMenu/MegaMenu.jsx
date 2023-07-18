@@ -8,12 +8,12 @@ const MegaMenu = () => {
      return (
           <section className='fixed top-[58px] hidden md:block left-0 z-[1] w-full px-4'>
                <div className='flex p-6 container mx-auto bg-light-gray shadow-lg'>
-                    <div className="lg:w-3/4 w-[100%] flex space-x-10">
-                         <div className='lg:max-w-[35%] max-w-[40%] border-r-[1px] pr-10 border-border'>
+                    <div className="w-[100%] lg:flex lg:space-x-10">
+                         <div className='lg:border-r-[1px] lg:w-[65%] lg:pr-10 border-border'>
                               <h2 className='text-xl uppercase mb-4 font-oswald underline'>Latest Article</h2>
-                              <div className='flex flex-col space-y-3'>
+                              <div className='grid grid-cols-2 gap-5'>
                                    {
-                                        PostMokeData.slice(0, 3).map((p, idx) => (
+                                        PostMokeData.slice(0, 6).map((p, idx) => (
                                              <div className="flex gap-4 items-center group " key={idx}>
                                                   <figure className="h-24 min-w-[6rem] overflow-hidden">
                                                        <img
@@ -34,7 +34,7 @@ const MegaMenu = () => {
                                    }
                               </div>
                          </div>
-                         <div className='lg:w-[65%] w-[60%]'>
+                         <div className='lg:w-[35%] pt-5 lg:pt-0'>
                               <div>
                                    <h2 className='text-xl uppercase mb-4 font-oswald underline'>Tags</h2>
                                    <ul className='flex flex-wrap gap-3'>
@@ -46,19 +46,11 @@ const MegaMenu = () => {
                               <div>
                                    <h2 className='text-xl uppercase mb-4 font-oswald mt-5 underline'>Categories</h2>
                                    <ul className='flex flex-wrap gap-3'>
-                                        {categoriesDate?.map((cat, id) => (
+                                        {categoriesDate.slice(0,9)?.map((cat, id) => (
                                              <li key={id} className='border-border border-[1px] text-gray-400 capitalize hover:border-transparent hover:bg-yellow hover:text-black cursor-pointer p-2 px-4 rounded-xl'>{cat.name}</li>
                                         ))}
                                    </ul>
                               </div>
-                         </div>
-                    </div>
-                    <div className="lg:block hidden w-1/4 ">
-                         <h2 className='text-xl uppercase mb-4 underline font-oswald'>Gallery</h2>
-                         <div className="grid grid-cols-2 gap-3">
-                              {gallery.slice(0,12).map((image,id) => (
-                                   <img src={image} key={id} alt="image" className="w-[260px] h-[100px]" />
-                              ))}
                          </div>
                     </div>
                </div>
