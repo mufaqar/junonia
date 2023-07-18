@@ -5,6 +5,7 @@ import { AiOutlineShareAlt } from "react-icons/ai";
 import Link from "next/link";
 
 const PostDesign = ({ post, layout, home, rounded }: any) => {
+  console.log("🚀 ~ file: post-design.tsx:8 ~ PostDesign ~ post:", post)
   return (
     <div
       className={`group overflow-hidden bg-light-gray shadow-md dark:shadow-lg
@@ -34,13 +35,13 @@ const PostDesign = ({ post, layout, home, rounded }: any) => {
         </figure>
       </Link>
       <div
-        className={`bg-light-gray ${layout === 2 && "md:w-1/2"} ${layout === 3 ? "p-0 bg-transparent" : 'p-6'
+        className={`bg-light-gray flex flex-col justify-center ${layout === 2 && "md:w-1/2"} ${layout === 3 ? "p-0 bg-transparent" : 'p-6'
           }
         ${layout === 3 && "p-0 pt-6"}`}
       >
         <div className={`${layout === 3 && "flex flex-col-reverse"}`}>
-          <p className="capitalize text-light-blue text-sm">
-            By Mufaqar- <span className="uppercase">16 July</span>
+          <p className="capitalize text-light-blue text-sm mb-3">
+            <span className="shadow-md p-1 px-3 mr-2 bg-yellow text-black rounded-full">{post.categories}</span> By Mufaqar- <span className="uppercase">16 July</span>
           </p>
           <h2
             className={`text-[18px] font-medium capitalize font-poppins ${layout === 3
@@ -52,7 +53,7 @@ const PostDesign = ({ post, layout, home, rounded }: any) => {
           </h2>
         </div>
         {layout !== 3 && (
-          <p className="mt-3 text-text font-normal">{GetWordStr(post?.body, 16)}</p>
+          <p className="mt-3 text-text font-normal">{GetWordStr(post?.body, layout === 2 ? 40 : 16)}</p>
         )}
       </div>
     </div>

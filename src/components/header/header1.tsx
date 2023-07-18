@@ -140,7 +140,7 @@ const Header1 = () => {
       >
         <SideSection />
       </section>
-      {!OpenMegaMenu && <MegaMenu/> }
+      {OpenMegaMenu && <MegaMenu/> }
     </>
   );
 };

@@ -46,40 +46,40 @@ export default Aside;
 const SocialSection = () => {
   return (
     <>
-      <div className="pt-[1px] bg-border my-6 mt-10 " />
-        <div className="flex text-2xl px-7 justify-between">
+      <div className="pt-[1px] bg-border mt-10 " />
+        <div className="flex text-2xl  justify-between">
           <Link
             href="#"
-            className="hover:text-yellow hover:scale-110 transition-all duration-200 ease-in-out"
+            className="hover:text-black hover:scale-110 bg-yellow text-black w-full py-5 flex justify-center transition-all duration-200 ease-in-out"
           >
             <FaFacebookF size={20}/>
           </Link>
           <Link
             href="#"
-            className="hover:text-yellow hover:scale-110 transition-all duration-200 ease-in-out"
+            className="hover:text-black hover:scale-110 bg-yellow text-black w-full py-5 flex justify-center transition-all duration-200 ease-in-out"
           >
             <FaInstagram size={20}/>
           </Link>
           <Link
             href="#"
-            className="hover:text-yellow hover:scale-110 transition-all duration-200 ease-in-out"
+            className="hover:text-black hover:scale-110 bg-yellow text-black w-full py-5 flex justify-center transition-all duration-200 ease-in-out"
           >
             <FaTwitter size={20}/>
           </Link>
           <Link
             href="#"
-            className="hover:text-yellow hover:scale-110 transition-all duration-200 ease-in-out"
+            className="hover:text-black hover:scale-110 bg-yellow text-black w-full py-5 flex justify-center transition-all duration-200 ease-in-out"
           >
             <FaLinkedinIn size={20}/>
           </Link>
           <Link
             href="#"
-            className="hover:text-yellow hover:scale-110 transition-all duration-200 ease-in-out"
+            className="hover:text-black hover:scale-110 bg-yellow text-black w-full py-5 flex justify-center transition-all duration-200 ease-in-out"
           >
             <FaPinterestP size={20}/>
           </Link>
         </div>
-      <div className="pt-[1px] bg-border my-6 mb-16" />
+      <div className="pt-[1px] bg-border mb-16" />
     </>
   );
 };
