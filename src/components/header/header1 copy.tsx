@@ -13,7 +13,6 @@ import SubMenu from "./subMenu";
 import Route from "./route";
 import { SlArrowDown } from "react-icons/sl";
 import MegaMenu from '../megaMenu/MegaMenu'
-import { navItems } from '../../const/navlinks'
 
 const Header1 = () => {
   const {
@@ -45,7 +44,7 @@ const Header1 = () => {
     setOpenMegaMenu(!OpenMegaMenu)
   }
 
-  const Handle2nslvlMenu = (id: string) => {
+  const Handle2nslvlMenu = (id:string) => {
     setSecoundlvlMenu(id)
   }
 
@@ -58,9 +57,66 @@ const Header1 = () => {
         <div className="container mx-auto flex py-2 justify-between items-center px-4 md:px-10">
           <Logo />
           <div className="flex text-white">
-
-            <Nav />
-
+            <ul
+              className={`gap-7 mr-4 md:items-center w-full ${isMobile
+                  ? "absolute top-[52px] flex flex-col gap-6 p-10 left-0 right-0 bg-black dark:bg-light-gray w-full"
+                  : "hidden md:flex"
+                }`}
+            >
+              <li className="group relative">
+                <div className="flex items-center gap-2">
+                  <Link href="#" className="uppercase text-white">
+                    Home
+                  </Link>
+                  <SlArrowDown />
+                </div>
+                <SubMenu>
+                  <Route to="/home/home1">home page 1</Route>
+                  <Route to="/home/home2">home page 2</Route>
+                </SubMenu>
+              </li>
+              <li className="group relative">
+                <div className="flex items-center gap-2">
+                  <Link href="#" className="uppercase text-white">
+                    Pages
+                  </Link>
+                  <SlArrowDown />
+                </div>
+                <SubMenu>
+                  <li onMouseEnter={()=>Handle2nslvlMenu('Blogs')}>
+                    <Link href="#" className="uppercase text-white">
+                      Blogs
+                    </Link>
+                    <ul>
+                      <Route to="/blogs">Blogs Page 1</Route>
+                      <Route to="/blogs2">Blogs Page 2</Route>
+                    </ul>
+                  </li>
+                  
+                  <Route to="/blogs/single-post">Post Layout 1</Route>
+                  <Route to="/blogs2/single-post">Post Layout 2</Route>
+                  <Route to="/categories">Categories Page</Route>
+                  <Route to="/category/Electronics">Category Filter Page</Route>
+                  <Route to="/author">Author Page</Route>
+                  <Route to="/404">404 Page</Route>
+                </SubMenu>
+              </li>
+              <li>
+                <Link href="/about-us" className="uppercase text-white">
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <button onClick={() => handleMegaMenu()} className="uppercase text-white">
+                  Mega Menu
+                </button>
+              </li>
+              <li>
+                <Link href="/contact-us" className="uppercase text-white">
+                  Contact Us
+                </Link>
+              </li>
+            </ul>
             <BiSearch
               size={24}
               className="mx-5 mt-1 cursor-pointer"
@@ -136,50 +192,72 @@ const SearchBox = () => {
   );
 };
 
-export const Nav = () => {
-  const {
-    searchOpen,
-    setSearchOpen,
-    isMobile,
-    setIsMobile,
-    setOpenSide,
-    openSide,
-    setOpenMegaMenu,
-    OpenMegaMenu
-  } = useContext(SettingsContext);
 
-  const [ActiveSubMenu, setActiveSubMenu] = useState<string>()
-  const HandleSubMenu = (id: string) => {
-    setActiveSubMenu(id)
-  }
 
-  return (
-    <ul className={`gap-7 mr-4 md:items-center w-full ${isMobile
-      ? "absolute top-[52px] flex flex-col gap-6 p-10 left-0 right-0 bg-black dark:bg-light-gray w-full"
-      : "hidden md:flex"
-      }`}>
+
+const navItem = [
+   {
+     name:'Home',
+     link: '#',
+     child: [
+       {
+        name: 'Home Page 1',
+        link: '/home/home1',
+       },
+       {
+        name: 'Home Page 2',
+        link: '/home/home2',
+       }
+     ]
+   },
+   {
+    name:'Pages',
+    link: '#',
+    child: [
       {
-        navItems.map((item: any, idx: number) => {
-          return (
-            <li className="flex items-center group relative gap-2" key={idx} onMouseEnter={() => HandleSubMenu(item.name)} onMouseLeave={() => setActiveSubMenu('')}>
-              <Link href={item.link} className="capitalize text-white">{item.name}</Link>
-              {item?.child?.length > 1 && <SlArrowDown size={13} />}
-              {
-                ActiveSubMenu === item.name && <SubMenu>
-                  {item?.child?.map((subLink: any, id: number) => {
-                    return (
-                      <Route to={subLink?.link} subChild={subLink?.subChild}>{subLink?.name} </Route>
-                    )
-                  })
-                  }
-                </SubMenu>
-              }
-            </li>
-          )
-        })
+       name: 'Blogs Layout',
+       link: '#',
+        subChild: [
+          {
+            name: 'Blog Layout 1',
+            link: '/blogs',
+          },
+          {
+            name: 'Blog Layout 2',
+            link: '/blogs2',
+          }
+        ]
+      },
+      {
+        name: 'Post Layout',
+        link: '#',
+         subChild: [
+           {
+             name: 'Post Layout 1',
+             link: '/blogs/single-post',
+           },
+           {
+             name: 'Post Layout 2',
+             link: '/blogs2/single-post',
+           }
+         ]
+      },
+      {
+        name: 'Categories',
+        link: '/categories'
+      },
+      {
+        name: 'Category Page',
+        link: '/category/Electronics'
+      },
+      {
+        name: 'Author Page',
+        link: '/author'
+      },
+      {
+        name: '404 Page',
+        link: '/404'
       }
-    </ul>
-  )
-}
-
-
+    ]
+  }
+]

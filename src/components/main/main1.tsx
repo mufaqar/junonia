@@ -15,7 +15,7 @@ const Main1 = () => {
 
   useEffect(() => {
     windowSize[0] <= 1080 ? setPost(Slide_BG.slice(0, 2)) : setPost(Slide_BG.slice(0, 4))
-  }, [windowSize, post])
+  }, [windowSize])
 
   const settings = {
     dots: false,
