@@ -39,7 +39,7 @@ const PostDesign = ({ post, layout, home, rounded }: any) => {
           }
         ${layout === 3 && "p-0 pt-6"}`}
       >
-        <div className={`${layout === 3 && "flex flex-col-reverse"}`}>
+        <div>
           <p className="capitalize text-light-blue text-sm mb-3">
             <span className="shadow-md p-1 px-3 mr-2 bg-yellow text-black rounded-full">{post.categories}</span> By Mufaqar- <span className="uppercase">16 July</span>
           </p>
