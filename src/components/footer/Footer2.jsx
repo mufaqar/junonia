@@ -6,8 +6,8 @@ const Footer2 = () => {
     <>
       <footer className="bg-light-gray">
         <div className="p-4 py-6 mx-auto max-w-screen-xl md:p-8 lg:p-10">
-          <div className="grid grid-cols-4 gap-8 md:grid-cols-3 lg:grid-cols-4">
-            <div>
+          <div className="grid grid-cols-3 gap-8 sm:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6">
+            <div className='col-span-3 lg:col-span-2 xl:col-span-3'>
               <Image
                 src="/assets/images/logo-white.png"
                 alt="logo"
@@ -16,7 +16,7 @@ const Footer2 = () => {
                 className="invert dark:invert-0 mx-auto"
               />
 
-              <p className="text-gray-500 dark:text-gray-400">
+              <p className="text-gray-500 dark:text-gray-400 text-center mt-3">
                 Lorem ipsum dolor sit amet, adipiscing elit Aenean commodo
                 ligula eget dolor aenean massa cum sociis natoque et magnis cum
                 aenean massa
@@ -128,10 +128,10 @@ const Footer2 = () => {
             </div>
 
             <div>
-              <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+              <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase text-center lg:text-left dark:text-white">
                 Legal Stuff
               </h2>
-              <ul className="text-gray-500 dark:text-gray-400">
+              <ul className="text-gray-500 dark:text-gray-400 text-center lg:text-left">
                 <li className="mb-4">
                   <a href="/privacy-policy" className="hover:underline">
                     Privacy Policy
@@ -150,10 +150,10 @@ const Footer2 = () => {
               </ul>
             </div>
             <div>
-              <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+              <h2 className="mb-6 text-sm font-semibold text-gray-900 text-center lg:text-left uppercase dark:text-white">
                 Company
               </h2>
-              <ul className="text-gray-500 dark:text-gray-400">
+              <ul className="text-gray-500 dark:text-gray-400 text-center lg:text-left">
                 <li className="mb-4">
                   <a href="#" className=" hover:underline">
                     About
@@ -177,10 +177,10 @@ const Footer2 = () => {
               </ul>
             </div>
             <div>
-              <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+              <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase text-center lg:text-left dark:text-white">
                 Download
               </h2>
-              <ul className="text-gray-500 dark:text-gray-400">
+              <ul className="text-gray-500 dark:text-gray-400 text-center lg:text-left">
                 <li className="mb-4">
                   <a href="#" className="hover:underline">
                     iOS
