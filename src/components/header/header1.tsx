@@ -153,9 +153,9 @@ export const Nav = () => {
         navItems.map((item: any, idx: number) => {
           return (
             <li className="group relative" key={idx} onMouseEnter={() => HandleSubMenu(item.name)} onMouseLeave={() => setActiveSubMenu('')}>
-              <div className="flex items-center gap-1 justify-between px-10 py-5 md:p-0 border-b-[1px] border-border md:border-none">
+              <div className="flex items-center gap-1.5 justify-between px-10 py-5 md:p-0 border-b-[1px] border-border md:border-none">
                 <Link href={item.link} className="capitalize text-white">{item.name}</Link>
-                {item?.child?.length > 1 && <><SlArrowDown size={12} /> </>}
+                {item?.child?.length > 1 && <><SlArrowDown size={13} className={`transition duration-200 ease-in-out ${ActiveSubMenu === item.name && '!transform !rotate-180'}`}/> </>}
               </div>
               {
                 ActiveSubMenu === item.name && <SubMenu>
