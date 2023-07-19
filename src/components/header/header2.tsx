@@ -56,7 +56,7 @@ const Header2 = () => {
             />
             <HiOutlineMenu
               size={24}
-              className="mr-5 mt-1 cursor-pointer"
+              className="mr-5 mt-1 cursor-pointer hidden md:block"
               onClick={() => setOpenSide(!openSide)}
             />
             <ThemeSwitch />
@@ -73,7 +73,7 @@ const Header2 = () => {
           </div>
         </div>
         <div className="bg-light-gray md:py-4 mt-10 flex justify-center z-50">
-         <Nav/>
+         <Nav color="#111"/>
         </div>
       </header>
 

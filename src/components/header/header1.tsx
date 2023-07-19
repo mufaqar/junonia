@@ -55,7 +55,7 @@ const Header1 = () => {
           <Logo />
           <div className="flex text-white">
 
-            <Nav />
+            <Nav color="#fff" />
 
             <BiSearch
               size={24}
@@ -132,7 +132,7 @@ const SearchBox = () => {
   );
 };
 
-export const Nav = () => {
+export const Nav = ({ color }: any) => {
   const {
     isMobile,
     setOpenMegaMenu,
@@ -145,7 +145,7 @@ export const Nav = () => {
   }
 
   return (
-    <ul className={`mr-4 md:gap-7 md:items-center  ${isMobile
+    <ul className={`mr-4 md:gap-7 md:items-center z-10 ${isMobile
       ? "absolute top-[52px] flex flex-col left-0 right-0 bg-black dark:bg-light-gray w-full"
       : "hidden md:flex"
       }`}>
@@ -153,9 +153,9 @@ export const Nav = () => {
         navItems.map((item: any, idx: number) => {
           return (
             <li className="group relative" key={idx} onMouseEnter={() => HandleSubMenu(item.name)} onMouseLeave={() => setActiveSubMenu('')}>
-              <div className="flex items-center gap-1.5 justify-between px-10 py-5 md:p-0 border-b-[1px] border-border md:border-none">
-                <Link href={item.link} className="capitalize text-white">{item.name}</Link>
-                {item?.child?.length > 1 && <><SlArrowDown size={13} className={`transition duration-200 ease-in-out ${ActiveSubMenu === item.name && '!transform !rotate-180'}`}/> </>}
+              <div className="flex items-center gap-1.5 nav-wrapper justify-between px-10 py-5 md:p-0 border-b-[1px] border-border md:border-none">
+                <Link href={item.link} className={`capitalize nav-text text-[${color}]`}>{item.name}</Link>
+                {item?.child?.length > 1 && <><SlArrowDown size={13} className={`transition duration-200 ease-in-out ${ActiveSubMenu === item.name && '!transform !rotate-180'}`} /> </>}
               </div>
               {
                 ActiveSubMenu === item.name && <SubMenu>

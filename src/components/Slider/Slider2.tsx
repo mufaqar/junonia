@@ -32,7 +32,7 @@ const SliderComponent2 = ({ data }: any) => {
                 className="h-full w-full object-cover"
               />
               <div className="bg-black/40 absolute inset-0" />
-              <div className="absolute max-w-[700px] p-4 w-full top-1/2 flex px-16  md:px-0 flex-col justify-start right-1/2 items-start transform -translate-y-1/2 translate-x-1/2">
+              <div className="absolute max-w-[700px] p-4 w-full top-1/2 flex px-16  md:px-4 flex-col justify-start right-1/2 items-start transform -translate-y-1/2 translate-x-1/2">
                 <span className="bg-yellow text-black py-1 px-3 rounded-2xl uppercase">{item?.categories}</span>
                 <h1 className="text-3xl mt-4 font-serif leading-[40px] md:leading-[50px] lg:leading-[55px] md:text-4xl lg:text-[48px] capitalize text-left text-white">
                   {item.title}
