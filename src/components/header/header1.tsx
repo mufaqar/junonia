@@ -163,7 +163,7 @@ export const Nav = () => {
                 ActiveSubMenu === item.name && <SubMenu>
                   {item?.child?.map((subLink: any, id: number) => {
                     return (
-                      <Route to={subLink?.link} subChild={subLink?.subChild}>{subLink?.name} </Route>
+                      <Route to={subLink?.link} key={id} subChild={subLink?.subChild}>{subLink?.name} </Route>
                     )
                   })
                   }
