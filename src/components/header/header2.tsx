@@ -16,6 +16,8 @@ import Socials from "../ui/socials";
 import { SlArrowDown } from "react-icons/sl";
 import SubMenu from "./subMenu";
 import Route from "./route";
+import { Nav } from "./header1";
+import MegaMenu from "../megaMenu/MegaMenu";
 
 const Header2 = () => {
   const {
@@ -25,6 +27,8 @@ const Header2 = () => {
     setIsMobile,
     setOpenSide,
     openSide,
+    setOpenMegaMenu,
+    OpenMegaMenu
   } = useContext(SettingsContext);
 
   const [scrollTop, setScrollTop] = useState<any>(0);
@@ -71,57 +75,7 @@ const Header2 = () => {
           </div>
         </div>
         <div className="bg-light-gray md:py-4 mt-10 flex justify-center z-50">
-          <ul
-            className={`gap-7 mr-4 md:items-center z-10 ${
-              isMobile
-                ? "absolute top-[52px] flex flex-col gap-6 p-10 left-0 right-0 bg-light-gray w-full"
-                : "hidden md:flex"
-            }`}
-          >
-            <li className="group relative">
-              <div className="flex items-center gap-2">
-                <Link href="#" className="uppercase dark:text-white text-black ">
-                  Home
-                </Link>
-                <SlArrowDown />
-              </div>
-              <SubMenu>
-                <Route to="/home/home1">home 1</Route>
-                <Route to="/home/home2">home 2</Route>
-              </SubMenu>
-            </li>
-            <li className="group relative">
-              <div className="flex items-center gap-2">
-                <Link href="#" className="uppercase dark:text-white text-black ">
-                  Pages
-                </Link>
-                <SlArrowDown />
-              </div>
-              <SubMenu>
-                <Route to="/blogs">Blogs 1</Route>
-                <Route to="/blogs2">Blogs 2</Route>
-                <Route to="/blogs/single-post">Single Post 1</Route>
-                <Route to="/blogs2/single-post">Single Post 2</Route>
-                <Route to="/category/Electronics">Filter Posts</Route>
-                <Route to="/404">404</Route>
-              </SubMenu>
-            </li>
-            <li>
-              <Link href="/about-us" className="uppercase dark:text-white text-black ">
-                About Us
-              </Link>
-            </li>
-            <li>
-              <Link href="/Categories" className="uppercase dark:text-white text-black ">
-                Categories
-              </Link>
-            </li>
-            <li>
-              <Link href="/contact-us" className="uppercase dark:text-white text-black ">
-                Contact Us
-              </Link>
-            </li>
-          </ul>
+         <Nav/>
         </div>
       </header>
 
@@ -137,6 +91,7 @@ const Header2 = () => {
       >
         <SideSection />
       </section>
+      {OpenMegaMenu && <MegaMenu />}
     </>
   );
 };
