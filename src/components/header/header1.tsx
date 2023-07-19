@@ -64,7 +64,7 @@ const Header1 = () => {
             />
             <HiOutlineMenu
               size={24}
-              className="mr-5 mt-1 cursor-pointer"
+              className="mr-5 mt-1 hidden md:block cursor-pointer"
               onClick={() => setOpenSide(!openSide)}
             />
             <ThemeSwitch />
@@ -145,17 +145,17 @@ export const Nav = () => {
   }
 
   return (
-    <ul className={`gap-7 mr-4  md:items-center  ${isMobile
-      ? "absolute top-[52px] flex flex-col gap-6 p-10 left-0 right-0 bg-black dark:bg-light-gray w-full"
+    <ul className={`mr-4 md:gap-7 md:items-center  ${isMobile
+      ? "absolute top-[52px] flex flex-col left-0 right-0 bg-black dark:bg-light-gray w-full"
       : "hidden md:flex"
       }`}>
       {
         navItems.map((item: any, idx: number) => {
           return (
             <li className="group relative" key={idx} onMouseEnter={() => HandleSubMenu(item.name)} onMouseLeave={() => setActiveSubMenu('')}>
-              <div className="flex items-center gap-1 justify-between">
+              <div className="flex items-center gap-1 justify-between px-10 py-5 md:p-0 border-b-[1px] border-border md:border-none">
                 <Link href={item.link} className="capitalize text-white">{item.name}</Link>
-                {item?.child?.length > 1 && <><SlArrowDown size={12} className="md:hidden" /> <SlArrowRight size={11} className="hidden md:block" /></>}
+                {item?.child?.length > 1 && <><SlArrowDown size={12} /> </>}
               </div>
               {
                 ActiveSubMenu === item.name && <SubMenu>
