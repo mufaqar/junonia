@@ -17,7 +17,7 @@ const VideosGallery = () => {
       <section className="md:flex gap-6">
         <div className="rounded-3xl relative md:w-[77%] overflow-hidden inline-block border-[10px] border-white dark:border-transparent shadow-xl">
           <Image
-            src="/assets/images/thumbnil1.jpg"
+            src="/assets/images/thumbnil3.jpg"
             alt="thumbnil"
             width={900}
             height={900}
@@ -31,7 +31,7 @@ const VideosGallery = () => {
         <div className="flex md:flex-col mt-5 md:mt-0 justify-between gap-5 md:w-[23%]">
           <div className="rounded-2xl relative md:rounded-3xl h-[33%] border-[6px] border-white dark:border-transparent shadow-xl overflow-hidden inline-block">
             <Image
-              src="/assets/images/thumbnil1.jpg"
+              src="/assets/images/thumbnil4.jpg"
               alt="thumbnil"
               width={900}
               height={900}
@@ -57,7 +57,7 @@ const VideosGallery = () => {
           </div>
           <div className="rounded-2xl relative md:rounded-3xl h-[33%] border-[6px] border-white dark:border-transparent shadow-xl overflow-hidden inline-block">
             <Image
-              src="/assets/images/thumbnil1.jpg"
+              src="/assets/images/thumbnil2.jpg"
               alt="thumbnil"
               width={900}
               height={900}

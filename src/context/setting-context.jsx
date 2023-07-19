@@ -12,6 +12,8 @@ export const SettingsProvider = ({ children }) => {
   const [openSide, setOpenSide] = useState(false);
   const [modalIsOpen, setIsOpen] = useState(false);
   const [OpenMegaMenu, setOpenMegaMenu] = useState(false);
+  const [darkMode, setDarkMode] = useState(false);
+  const [headerClr, setHeaderClr] = useState(false);
 
   useEffect(() => {
     const handleWindowResize = () => {
@@ -29,7 +31,14 @@ export const SettingsProvider = ({ children }) => {
     }
   }, []);
 
-
+  useEffect(() => {
+    const darkTheme = localStorage.getItem('theme');
+    if (darkTheme === 'dark') {
+      setDarkMode(true);
+    }else{
+      setDarkMode(false);
+    }
+  }, []);
 
 
   return (
@@ -48,7 +57,11 @@ export const SettingsProvider = ({ children }) => {
         modalIsOpen,
         setIsOpen,
         setOpenMegaMenu,
-        OpenMegaMenu
+        OpenMegaMenu,
+        setDarkMode,
+        darkMode,
+        headerClr, 
+        setHeaderClr
       }}
     >
       {children}

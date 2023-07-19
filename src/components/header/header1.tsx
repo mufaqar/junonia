@@ -25,11 +25,12 @@ const Header1 = () => {
     setOpenSide,
     openSide,
     setOpenMegaMenu,
-    OpenMegaMenu
+    OpenMegaMenu,
+    headerClr, 
+    setHeaderClr
   } = useContext(SettingsContext);
 
   const [scrollTop, setScrollTop] = useState<any>(0);
-  const [headerClr, setHeaderClr] = useState(false);
 
   useEffect(() => {
     function onScroll() {

@@ -5,7 +5,6 @@ import { AiOutlineShareAlt } from "react-icons/ai";
 import Link from "next/link";
 
 const PostDesign = ({ post, layout, home, rounded }: any) => {
-  console.log("🚀 ~ file: post-design.tsx:8 ~ PostDesign ~ post:", post)
   return (
     <div
       className={`group overflow-hidden bg-light-gray shadow-md dark:shadow-lg
