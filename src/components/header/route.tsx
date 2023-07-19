@@ -14,7 +14,7 @@ const Route = ({ children, to, subChild }: any) => {
     <li className='relative ' onMouseEnter={() => HandleSubNav(children)} onMouseLeave={() => setOpenSubChild('')}>
       <Link href={to} className="capitalize text-black dark:text-white flex items-center justify-between hover:!text-light-blue md:py-3 md:border  border-border border-b-[1px] px-10 py-5 md:border-b-0 md:px-4">
         {children}
-        {subChild?.length > 1 && <><SlArrowDown size={12} className="md:hidden" /> <SlArrowRight size={11} className="hidden md:block" /></>}
+        {subChild?.length > 1 && <><SlArrowDown size={12}  className={`transition md:hidden duration-200 ease-in-out ${OpenSubChild === children[0] && '!transform !rotate-180'}`}/> <SlArrowRight size={11} className="hidden md:block" /></>}
       </Link>
       {
         OpenSubChild === children[0] && subChild?.length > 1 &&
