@@ -1,5 +1,4 @@
 import React from 'react'
-import { gallery } from '../../const/gallery-image'
 import { PostMokeData } from "@/const/post";
 import { FiCalendar } from 'react-icons/fi';
 import { Tags, categoriesDate } from '../../const/categories'
@@ -24,7 +23,7 @@ const MegaMenu = () => {
                                                   </figure>
                                                   <div>
                                                        <div className="flex items-center gap-2">
-                                                       <span className='capitalize text-sm py-[2px] px-2 bg-yellow text-black rounded-full'>{p?.categories}</span>  <span className="text-light-blue flex item-center gap-1  text-sm"> <FiCalendar size={17} /> <span className="-mt-[2px]">{idx} DECEMBER</span></span>
+                                                       <span className='capitalize text-sm py-[2px] px-2 bg-yellow text-black rounded-full'>{p?.categories}</span>  <span className="text-light-blue flex item-center gap-1  text-sm"> <FiCalendar size={17} /> <span className="-mt-[2px]">{idx+1} DECEMBER</span></span>
                                                        </div>
                                                        <h2 className="uppercase pt-1 text-sm text-pure cursor-pointer group-hover:underline">
                                                             {p.title}

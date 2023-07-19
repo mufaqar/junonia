@@ -143,19 +143,20 @@ export const Nav = () => {
   const HandleSubMenu = (id: string) => {
     setActiveSubMenu(id)
   }
-  const router = useRouter()
 
   return (
-    <ul className={`gap-7 mr-4 md:items-center w-full ${isMobile
+    <ul className={`gap-7 mr-4  md:items-center w-full ${isMobile
       ? "absolute top-[52px] flex flex-col gap-6 p-10 left-0 right-0 bg-black dark:bg-light-gray w-full"
       : "hidden md:flex"
       }`}>
       {
         navItems.map((item: any, idx: number) => {
           return (
-            <li className="flex items-center group relative gap-2" key={idx} onMouseEnter={() => HandleSubMenu(item.name)} onMouseLeave={() => setActiveSubMenu('')}>
-              <Link href={item.link} className="capitalize text-white">{item.name}</Link>
-              {item?.child?.length > 1 && <SlArrowDown size={13} />}
+            <li className="group relative " key={idx} onMouseEnter={() => HandleSubMenu(item.name)} onMouseLeave={() => setActiveSubMenu('')}>
+              <div className="flex items-center gap-1 justify-between">
+                <Link href={item.link} className="capitalize text-white">{item.name}</Link>
+                {item?.child?.length > 1 && <SlArrowDown size={13} />}
+              </div>
               {
                 ActiveSubMenu === item.name && <SubMenu>
                   {item?.child?.map((subLink: any, id: number) => {
@@ -163,14 +164,14 @@ export const Nav = () => {
                       <Route to={subLink?.link} key={id} subChild={subLink?.subChild}>{subLink?.name} </Route>
                     )
                   })
-                  }
+                 }
                 </SubMenu>
               }
             </li>
           )
         })
       }
-      <button onClick={()=>setOpenMegaMenu(!OpenMegaMenu)}>Mega Menu</button>
+      <button className="text-left" onClick={() => setOpenMegaMenu(!OpenMegaMenu)}>Mega Menu</button>
     </ul>
   )
 }
