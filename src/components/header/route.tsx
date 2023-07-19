@@ -18,7 +18,7 @@ const Route = ({ children, to, subChild }: any) => {
       </Link>
       {
         OpenSubChild === children[0] && subChild?.length > 1 &&
-        <div className='absolute right-[-100%] top-0 bg-light-gray md:w-[200px]'>
+        <div className='absolute right-[-101%] -top-[1px] bg-light-gray md:w-[200px]'>
           {
             subChild?.map((item: any, idx: number) => {
               return (
