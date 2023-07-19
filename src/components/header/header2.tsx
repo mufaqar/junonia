@@ -27,8 +27,6 @@ const Header2 = () => {
     setIsMobile,
     setOpenSide,
     openSide,
-    setOpenMegaMenu,
-    OpenMegaMenu
   } = useContext(SettingsContext);
 
   const [scrollTop, setScrollTop] = useState<any>(0);
@@ -91,7 +89,7 @@ const Header2 = () => {
       >
         <SideSection />
       </section>
-      {OpenMegaMenu && <MegaMenu />}
+      
     </>
   );
 };

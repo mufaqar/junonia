@@ -11,10 +11,10 @@ import { HiOutlineMenu } from "react-icons/hi";
 import SideSection from "../side-section/side-section";
 import SubMenu from "./subMenu";
 import Route from "./route";
-import { SlArrowDown } from "react-icons/sl";
+import { SlArrowDown, SlArrowRight } from "react-icons/sl";
 import MegaMenu from '../megaMenu/MegaMenu'
 import { navItems } from '../../const/navlinks'
-import { useRouter } from "next/navigation";
+
 
 const Header1 = () => {
   const {
@@ -155,7 +155,7 @@ export const Nav = () => {
             <li className="group relative" key={idx} onMouseEnter={() => HandleSubMenu(item.name)} onMouseLeave={() => setActiveSubMenu('')}>
               <div className="flex items-center gap-1 justify-between">
                 <Link href={item.link} className="capitalize text-white">{item.name}</Link>
-                {item?.child?.length > 1 && <SlArrowDown size={12} />}
+                {item?.child?.length > 1 && <><SlArrowDown size={12} className="md:hidden" /> <SlArrowRight size={11} className="hidden md:block" /></>}
               </div>
               {
                 ActiveSubMenu === item.name && <SubMenu>
@@ -164,7 +164,7 @@ export const Nav = () => {
                       <Route to={subLink?.link} key={id} subChild={subLink?.subChild}>{subLink?.name} </Route>
                     )
                   })
-                 }
+                  }
                 </SubMenu>
               }
             </li>

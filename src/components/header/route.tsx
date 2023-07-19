@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import React, { useState } from 'react'
 import { SlArrowRight } from 'react-icons/sl'
-import SubMenu from './subMenu'
+
 
 const Route = ({ children, to, subChild }: any) => {
   const [OpenSubChild, setOpenSubChild] = useState('')
@@ -18,7 +18,7 @@ const Route = ({ children, to, subChild }: any) => {
       </Link>
       {
         OpenSubChild === children[0] && subChild?.length > 1 &&
-        <div className='absolute right-[-101%] -top-[1px] bg-light-gray md:w-[200px]'>
+        <div className='md:absolute right-[-101%] -top-[1px] bg-light-gray md:w-[200px]'>
           {
             subChild?.map((item: any, idx: number) => {
               return (
