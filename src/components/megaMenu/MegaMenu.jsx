@@ -23,11 +23,13 @@ const MegaMenu = () => {
                                                        />
                                                   </figure>
                                                   <div>
-                                                       <span className='capitalize text-sm py-[2px] px-2 bg-yellow text-black rounded-full'>{p?.categories}</span>
+                                                       <div className="flex items-center gap-2">
+                                                       <span className='capitalize text-sm py-[2px] px-2 bg-yellow text-black rounded-full'>{p?.categories}</span>  <span className="text-light-blue flex item-center gap-1  text-sm"> <FiCalendar size={17} /> <span className="-mt-[2px]">{idx} DECEMBER</span></span>
+                                                       </div>
                                                        <h2 className="uppercase pt-1 text-sm text-pure cursor-pointer group-hover:underline">
                                                             {p.title}
                                                        </h2>
-                                                       <span className="text-light-blue flex item-center gap-1 mt-2 text-sm"> <FiCalendar size={17} /> <span className="-mt-[2px]">22 DECEMBER</span></span>
+                                                       
                                                   </div>
                                              </div>
                                         ))

@@ -37,13 +37,3 @@ const Route = ({ children, to, subChild }: any) => {
 }
 
 export default Route
-
-
-const RouteLink = ({ children, to, subChild }: any) => {
-  return (
-    <Link href={to} className="capitalize text-black dark:text-white flex items-center justify-between hover:!text-light-blue">
-      {children}
-      {subChild?.length > 1 && <SlArrowRight size={11} />}
-    </Link>
-  )
-}

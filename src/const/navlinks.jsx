@@ -90,10 +90,7 @@ export const navItems = [
       name:'About Us',
       link: '#',
      },
-     {
-      name:'Mega Menu',
-      link: '#',
-     },
+     
      {
       name:'Contact Us',
       link: '#',

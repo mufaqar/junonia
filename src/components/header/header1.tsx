@@ -30,7 +30,6 @@ const Header1 = () => {
 
   const [scrollTop, setScrollTop] = useState<any>(0);
   const [headerClr, setHeaderClr] = useState(false);
-  const [SecoundlvlMenu, setSecoundlvlMenu] = useState<string>();
 
   useEffect(() => {
     function onScroll() {
@@ -44,10 +43,6 @@ const Header1 = () => {
 
   const handleMegaMenu = () => {
     setOpenMegaMenu(!OpenMegaMenu)
-  }
-
-  const Handle2nslvlMenu = (id: string) => {
-    setSecoundlvlMenu(id)
   }
 
   return (
@@ -140,6 +135,8 @@ const SearchBox = () => {
 export const Nav = () => {
   const {
     isMobile,
+    setOpenMegaMenu,
+    OpenMegaMenu
   } = useContext(SettingsContext);
 
   const [ActiveSubMenu, setActiveSubMenu] = useState<string>()
@@ -173,7 +170,7 @@ export const Nav = () => {
           )
         })
       }
-      <button onClick={()=>router.push('/blogs/single-post')}>Home</button>
+      <button onClick={()=>setOpenMegaMenu(!OpenMegaMenu)}>Mega Menu</button>
     </ul>
   )
 }
