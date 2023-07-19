@@ -14,6 +14,7 @@ import Route from "./route";
 import { SlArrowDown } from "react-icons/sl";
 import MegaMenu from '../megaMenu/MegaMenu'
 import { navItems } from '../../const/navlinks'
+import { useRouter } from "next/navigation";
 
 const Header1 = () => {
   const {
@@ -138,20 +139,14 @@ const SearchBox = () => {
 
 export const Nav = () => {
   const {
-    searchOpen,
-    setSearchOpen,
     isMobile,
-    setIsMobile,
-    setOpenSide,
-    openSide,
-    setOpenMegaMenu,
-    OpenMegaMenu
   } = useContext(SettingsContext);
 
   const [ActiveSubMenu, setActiveSubMenu] = useState<string>()
   const HandleSubMenu = (id: string) => {
     setActiveSubMenu(id)
   }
+  const router = useRouter()
 
   return (
     <ul className={`gap-7 mr-4 md:items-center w-full ${isMobile
@@ -178,6 +173,7 @@ export const Nav = () => {
           )
         })
       }
+      <button onClick={()=>router.push('/blogs/single-post')}>Home</button>
     </ul>
   )
 }

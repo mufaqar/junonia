@@ -4,7 +4,6 @@ import { SlArrowRight } from 'react-icons/sl'
 import SubMenu from './subMenu'
 
 const Route = ({ children, to, subChild }: any) => {
-  console.log("🚀 ~ file: route.tsx:7 ~ Route ~ children:", children[0])
   const [OpenSubChild, setOpenSubChild] = useState('')
 
   const HandleSubNav = (id:string) => {
@@ -15,7 +14,9 @@ const Route = ({ children, to, subChild }: any) => {
     <li className='py-3 md:border relative md:border-border !border-b-0 px-4' onMouseEnter={()=>HandleSubNav(children)} onMouseLeave={()=>setOpenSubChild('')}>
       <RouteLink children={children} to={to} subChild={subChild}/>
       {
-        OpenSubChild === children[0] && subChild?.length > 1 && <SubMenu>
+        OpenSubChild === children[0] && subChild?.length > 1 && 
+        <div className='absolute right-0 -top-[41px]'>
+        <SubMenu>
           {
             subChild?.map((item:any, idx:number)=>{
               return(
@@ -26,6 +27,7 @@ const Route = ({ children, to, subChild }: any) => {
             })
           }
         </SubMenu>
+        </div>
       }
     </li>
   )
@@ -37,7 +39,7 @@ export default Route
 const RouteLink = ({children, to, subChild}:any) => {
   return(
     <Link href={to} className="capitalize text-black dark:text-white flex items-center justify-between hover:!text-light-blue">
-        <span>{children}</span>
+        {children}
         { subChild?.length > 1 && <SlArrowRight size={11} /> }
       </Link>
   )
