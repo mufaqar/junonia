@@ -27,10 +27,13 @@ const Header2 = () => {
     setIsMobile,
     setOpenSide,
     openSide,
+    headerClr, 
+    darkMode,
+    setHeaderClr
   } = useContext(SettingsContext);
 
   const [scrollTop, setScrollTop] = useState<any>(0);
-  const [headerClr, setHeaderClr] = useState(false);
+  // const [headerClr, setHeaderClr] = useState(false);
 
   useEffect(() => {
     function onScroll() {
@@ -47,7 +50,7 @@ const Header2 = () => {
       <header className={`max-h-[64px] w-full md:mt-16 z-[100]`}>
         <div className="container mx-auto flex py-2 justify-between items-center px-4 md:px-10">
           <Socials />
-          <Logo />
+          <Logo darkMode={darkMode} headerClr={headerClr}/>
           <div className="flex item-center gap-2">
             <BiSearch
               size={24}

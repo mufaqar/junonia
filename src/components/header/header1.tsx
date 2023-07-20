@@ -26,8 +26,8 @@ const Header1 = () => {
     openSide,
     setOpenMegaMenu,
     OpenMegaMenu,
-    headerClr, 
     setHeaderClr,
+    headerClr, 
     darkMode,
   } = useContext(SettingsContext);
 
