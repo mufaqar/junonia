@@ -27,7 +27,8 @@ const Header1 = () => {
     setOpenMegaMenu,
     OpenMegaMenu,
     headerClr, 
-    setHeaderClr
+    setHeaderClr,
+    darkMode,
   } = useContext(SettingsContext);
 
   const [scrollTop, setScrollTop] = useState<any>(0);
@@ -53,7 +54,7 @@ const Header1 = () => {
           }`}
       >
         <div className="container mx-auto flex py-2 justify-between items-center px-4 md:px-10">
-          <Logo />
+          <Logo darkMode={darkMode} headerClr={headerClr}/>
           <div className="flex text-white">
 
             <Nav color="#fff" />
