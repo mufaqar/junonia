@@ -7,6 +7,7 @@ import { SettingsContext } from "@/context/setting-context";
 import { PostMokeData } from '../../const/post'
 import Slider from "react-slick";
 import { IoIosArrowForward, IoIosArrowBack } from 'react-icons/io'
+import Image from "next/image";
 
 
 const Main1 = () => {
@@ -48,7 +49,7 @@ const Main1 = () => {
             {
               Slide_BG.slice(4).map((item: any, idx: number) => {
                 return (
-                  <img src={item.img} alt="img" key={idx} className="h-[580px] object-cover" />
+                  <Image src={item.img} alt="img" key={idx} width={580} height={580} className="h-[580px] object-cover" />
                 )
               })
             }

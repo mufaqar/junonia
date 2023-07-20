@@ -88,11 +88,11 @@ export const navItems = [
      },
      {
       name:'About Us',
-      link: '#',
+      link: '/about-us',
      },
      
      {
       name:'Contact Us',
-      link: '#',
+      link: '/contact-us',
      },
   ]

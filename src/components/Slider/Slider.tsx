@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import Button from "../ui/button";
 import {IoIosArrowForward, IoIosArrowBack} from 'react-icons/io'
 import {CgArrowLongRight} from 'react-icons/cg'
+import Image from "next/image";
 
 const SliderComponent = ({ data }: any) => {
   const settings = {
@@ -23,9 +24,11 @@ const SliderComponent = ({ data }: any) => {
         {data.map((item: any, idx: number) => {
           return (
             <div className={`h-screen relative 2xl:h-[800px]`} key={idx}>
-              <img
+              <Image
                 src={item?.img}
                 alt="img"
+                width={1000}
+                height={1000}
                 className="h-full w-full object-cover"
               />
               <div className="bg-black/30 absolute inset-0" />

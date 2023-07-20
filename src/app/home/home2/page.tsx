@@ -96,7 +96,7 @@ const Home2 = () => {
                 </div>
               </div>
               <div>
-                <img src="/assets/images/subscribe.webp" alt="" />
+                <Image src="/assets/images/subscribe.webp" alt="image" width={300} height={300} className="w-full"/>
               </div>
             </div>
           </section>

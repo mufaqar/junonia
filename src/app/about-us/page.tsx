@@ -173,10 +173,10 @@ const Page = () => {
       <div className="pt-[1px] w-full mt-6 bg-border" />
       <Layout>
         <div className="my-28">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid md:grid-cols-2 gap-5 lg:grid-cols-3">
             <div className="flex flex-col">
               <div className="overflow-hidden">
-                <img src="/assets/images/profile1.jpeg" alt="" className="hover:scale-110 transition-all duration-300 w-full h-[450px] object-cover ease-in-out"/>
+                <Image src="/assets/images/profile1.jpeg" alt="img" width={450} height={450} className="hover:scale-110 transition-all duration-300 w-full h-[450px] object-cover ease-in-out"/>
               </div>
               <div className="bg-yellow p-5 text-center text-dark-gray">
                 <h3 className="font-medium text-xl capitalize">mark spencer author</h3>
@@ -186,7 +186,7 @@ const Page = () => {
 
             <div className="main">
             <div className="overflow-hidden">
-                <img src="/assets/images/profile2.jpeg" alt="" className="hover:scale-110 transition-all duration-300 w-full h-[450px] object-cover ease-in-out"/>
+                <Image src="/assets/images/profile2.jpeg" alt="img" width={450} height={450} className="hover:scale-110 transition-all duration-300 w-full h-[450px] object-cover ease-in-out"/>
               </div>
               <div className="bg-yellow p-5 text-center text-dark-gray">
                 <h3 className="font-medium text-xl capitalize">mark spencer author</h3>
@@ -196,7 +196,7 @@ const Page = () => {
 
             <div className="main">
               <div className="overflow-hidden">
-                <img src="/assets/images/profile3.jpeg" alt="" className="hover:scale-110 transition-all duration-300 w-full h-[450px] object-cover ease-in-out"/>
+                <Image src="/assets/images/profile3.jpeg" alt="img" width={450} height={450} className="hover:scale-110 transition-all duration-300 w-full h-[450px] object-cover ease-in-out"/>
               </div>
               <div className="bg-yellow p-5 text-center text-dark-gray">
                 <h3 className="font-medium text-xl capitalize">mark spencer author</h3>

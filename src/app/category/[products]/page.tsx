@@ -10,6 +10,7 @@ import PostDesign from "@/components/post-design/post-design";
 import Button from "@/components/ui/button";
 import { categoriesDate } from "@/const/categories";
 import { PostMokeData } from "@/const/post";
+import Image from "next/image";
 import Link from "next/link";
 import { useParams } from 'next/navigation';
 
@@ -48,9 +49,11 @@ const Blog = () => {
               return (
                 <div key={idx}>
                   <figure className="relative group overflow-hidden">
-                    <img
+                    <Image
                       src={item?.img}
                       alt="image"
+                      width={260}
+                      height={260}
                       className="h-40 sm:h-60 group-hover:scale-110 xl:h-80 w-full object-cover transition-all duration-200 ease-in-out"
                     />
                     <div className="absolute inset-0 bg-black/40 hidden group-hover:block">

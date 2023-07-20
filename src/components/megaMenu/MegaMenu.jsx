@@ -2,6 +2,7 @@ import React from 'react'
 import { PostMokeData } from "@/const/post";
 import { FiCalendar } from 'react-icons/fi';
 import { Tags, categoriesDate } from '../../const/categories'
+import Image from 'next/image';
 
 const MegaMenu = () => {
      return (
@@ -15,9 +16,11 @@ const MegaMenu = () => {
                                         PostMokeData.slice(0, 6).map((p, idx) => (
                                              <div className="flex gap-4 items-center group " key={idx}>
                                                   <figure className="h-24 min-w-[6rem] overflow-hidden">
-                                                       <img
+                                                       <Image
                                                             src={p?.img}
                                                             alt="feature"
+                                                            width={96}
+                                                            height={96}
                                                             className="h-24 _img object-cover group-hover:scale-110 transition-all duration-200"
                                                        />
                                                   </figure>
@@ -40,7 +43,7 @@ const MegaMenu = () => {
                                    <h2 className='text-xl uppercase mb-4 font-oswald underline'>Tags</h2>
                                    <ul className='flex flex-wrap gap-3'>
                                         {Tags?.map((tag, id) => (
-                                             <li key={id} className='border-border border-[1px] text-gray-400 capitalize hover:border-transparent hover:bg-yellow hover:text-black cursor-pointer p-2 px-4 rounded-xl'>{tag.name}</li>
+                                             <li key={id} className='border-border border-[1px] text-gray-400 capitalize hover:border-transparent hover:bg-yellow hover:text-black cursor-pointer p-2 px-4 rounded-xl'>#{tag.name}</li>
                                         ))}
                                    </ul>
                               </div>

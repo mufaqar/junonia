@@ -149,9 +149,11 @@ export const LatestPostSection = ({ posts }: any) => {
           return (
             <div className="flex gap-4 items-center group " key={idx}>
               <figure className="h-24 min-w-[6rem] overflow-hidden">
-              <img
+              <Image
                 src={p?.img}
                 alt="feature"
+                width={96}
+                height={96}
                 className="h-24 _img object-cover group-hover:scale-110 group-hover:rotate-6 transition-all duration-200"
               />
               </figure>
